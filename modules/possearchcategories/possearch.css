@@ -1,0 +1,70 @@
+#pos_search_top{margin-top: 30px;}
+#pos_search_top .form_search{
+	padding: 0;
+	width: 100%;
+	border:2px solid #e1e1e1;
+	position:relative;
+}
+/*  */
+#pos_search_top label{
+display: none;}
+#pos_search_top .form-control{
+	font-family:"Lato",sans-serif;
+	background: none repeat scroll 0 0 #fff;
+    border: 0 none;
+    color: #b6b6b6;
+    font-size: 14px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 60px 0 125px;}
+/*  */
+#pos_search_top .submit_search{
+	margin:6px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0;
+  font-size: 13px;
+  border: 0;
+  border-left:1px solid #e1e1e1;
+  color: #222;
+  text-align: center;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;}
+#pos_search_top .submit_search:hover{
+color: #92c841;}
+/*  */
+#pos_search_top .form-group{
+position: absolute;
+top: 0;
+left: 0;
+width: 120px;}
+#pos_search_top .form-group .bootstrap-select{
+width: 120px;}
+#pos_search_top .form-group .bootstrap-select .btn.selectpicker{
+	padding: 0 15px;
+	border: 0;
+	color: #222;
+	font: 500 14px/45px "Lato",sans-serif;}
+#pos_search_top .form-group .bootstrap-select .btn-default .caret{
+font-family: 'FontAwesome';
+content: "\f0d7";}
+#pos_search_top .bootstrap-select.btn-group .btn .filter-option{
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+display: block;}
+@media (max-width: 767px){
+	#pos_search_top{
+		float: none;
+		margin: 0 auto;}
+	#pos_search_top .form_search{
+	margin: 0 auto;
+	width: 80%;}
+}

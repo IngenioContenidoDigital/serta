@@ -1,0 +1,652 @@
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+ 
+/* Browser Resets */
+.pos-slideshow-container .flex-container a:active,
+.pos-slideshow-container .flexslider a:active,
+.pos-slideshow-container .flex-container a:focus,
+.pos-slideshow-container .flexslider a:focus  {outline: none;}
+.pos-slideshow-container .slides,
+.pos-slideshow-container .flex-control-nav,
+.pos-slideshow-container .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.pos-slideshow-container .flexslider {margin: 0; padding: 0;}
+.pos-slideshow-container .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; position: relative; } /* Hide the slides before the JS is loaded. Avoids image jumping */
+.pos-slideshow-container .flexslider .slides img {width: 100%; display: block;}
+.pos-slideshow-container .flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.pos-slideshow-container .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .pos-slideshow-container .slides {display: block;} 
+* html .pos-slideshow-container .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .pos-slideshow-container .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.pos-slideshow-container .flexslider {margin: 0 0 20px; position: relative; zoom: 1; min-height: 50px; }
+.pos-slideshow-container .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.pos-slideshow-container .loading .flex-viewport {max-height: 300px;}
+.pos-slideshow-container .flexslider .slides {zoom: 1;}
+
+.pos-slideshow-container .carousel li {margin-right: 5px}
+
+
+/* Direction Nav */
+.pos-slideshow{
+	position:relative;
+}
+.pos-slideshow-container .flex-direction-nav {*height: 0;}
+.pos-slideshow-container .flex-direction-nav a,
+.nivo-directionNav a { 
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+    color: #ccc;
+    cursor: pointer;
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top:45%;
+    transition: all 300ms ease-in 0s;
+    width: 50px;
+    z-index: 9;
+}
+.pos-slideshow-container .flex-direction-nav a:hover,
+.nivo-directionNav a:hover{
+	background: #5bd77b;
+	color:#fff;
+} 
+.pos-slideshow-container .flex-direction-nav .flex-next,
+.nivo-directionNav a.nivo-nextNav { background-position: 100% 0; right:5%; }
+.pos-slideshow-container .flex-direction-nav .flex-prev,
+.nivo-directionNav a.nivo-prevNav { left:5%;}
+.pos-slideshow-container .flexslider:hover .flex-next { }
+.pos-slideshow-container .flexslider:hover .flex-prev { }
+.pos-slideshow-container .flexslider:hover .flex-next:hover, .pos-slideshow-container .flexslider:hover .flex-prev:hover {opacity: 1;}
+.pos-slideshow-container .flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.pos-slideshow-container .flex-control-nav,
+.nivo-controlNav {
+    bottom: 0;
+    height: 30px;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100px;
+    z-index: 9;
+}
+.pos-slideshow-container .flex-control-nav li { margin: 0 6px; display: inline-block; zoom: 1; *display: inline; }
+.pos-slideshow-container .flex-control-paging li a,
+.nivo-controlNav a {width: 11px; height: 11px; display: block; background: #fff; cursor: pointer; text-indent: -9999px;
+box-shadow: none; z-index: 9;
+}
+.pos-slideshow-container .flex-control-paging li a:hover,
+.pos-slideshow-container .flex-control-paging li a.flex-active,
+.nivo-controlNav a:hover,
+.nivo-controlNav a.active {
+    background: none repeat scroll 0 0 #86c98f;
+    border-color: #86c98f;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+
+.pos-slideshow-container .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.pos-slideshow-container .flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.pos-slideshow-container .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.pos-slideshow-container .flex-control-thumbs img:hover {opacity: 1;}
+.pos-slideshow-container .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+
+.ma-nivoslider {
+	overflow: hidden;
+}
+.nivoslider {
+	position: relative;
+	overflow: hidden;
+	height: auto;
+	width: 100%; 
+}
+.nivoslider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	height: 455px !important;
+}
+.nivo-controlNav a {
+	border: 3px solid #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    margin: 0 2px;
+    position: relative;
+    text-indent: -9999px;
+    width: 10px;
+    z-index: 9;
+}
+	@-webkit-keyframes myfirst {
+		from {width: 0;}
+		to {width: 100%;}
+	}
+	@keyframes myfirst {
+		from {width: 0;}
+		to {width: 100%;}
+	}
+	.timethai.pos_hover{
+		-webkit-animation-play-state: paused;
+		animation-play-state: paused;
+		
+	}
+	.pos-slideshow{
+		cursor: pointer;
+	}
+.pos-slideshow-caption {
+	position: absolute;
+ 	left:0; 
+ 	top:0;	
+	width: 100%;
+	background: none;
+	color: #fff;
+	font-size: 16px;
+	z-index: 999;
+}
+.pos-slideshow-title {
+    left: 25%;
+    position: absolute;
+	text-align:center;
+    top: 130px;
+    width: 50%;
+	-webkit-transition:all 0.5s ease; 
+  	   -moz-transition:all 0.5s ease;
+     	-ms-transition:all 0.5s ease;
+     	 -o-transition:all 0.5s ease;
+        	transition:all 0.5s ease;   
+}
+.pos-slideshow-title h3 {
+    color: #fff;
+    font-family:"loraregular";
+    font-size: 40px;
+	line-height:40px;
+    text-align: left;
+    text-transform: uppercase;
+    width: auto;
+    z-index: 50;
+	display:inline-block;
+}
+.pos-slideshow-des h2{
+    color: #fff;
+    font-family: 'lobster';
+    font-size: 48px;
+    text-transform: uppercase;
+    width: auto;
+}
+.pos-slideshow-des p{
+	color: #fff;
+    font-family: OpenSansRegular;
+    font-size: 15px;
+	line-height:15px;
+	font-weight: normal;
+}
+.pos-slideshow-des h3.subtitle{
+	color: #e4e3e2;
+	font-size: 32px;
+	line-height:32px;
+	font-family:'impact';
+}
+.pos-slideshow-des .intro{
+	color:#d0d0d0;
+	font-size:14px;
+	font-family:HelveticaLTStdRoman;
+	font-weight: normal;
+}
+.pos-slideshow-des {
+	position: absolute;
+ 	left:25%;
+	text-align:center;
+ 	top: 175px;
+	width: 50%;
+	color: #575757;
+	-webkit-transition:all 1.5s ease; 
+  	   -moz-transition:all 1.5s ease;
+     	-ms-transition:all 1.5s ease;
+     	 -o-transition:all 1.5s ease;
+        	transition:all 1.5s ease;  
+}
+.pos-slideshow-readmore {
+	position: absolute;
+	text-align:center;
+ 	left:25%; 
+	width:50%;
+ 	top:315px;
+	padding: 5px 3px 5px 2px;
+	-webkit-transition:all 2s ease; 
+  	   -moz-transition:all 2s ease;
+     	-ms-transition:all 2s ease;
+     	 -o-transition:all 2s ease;
+        	transition:all 2s ease;  
+}
+.pos-slideshow-readmore a {
+    border: 2px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-family: DaunPenh;
+    font-size: 28px;
+    height: 50px;
+    line-height: 28px;
+    padding: 14px 20px 5px;
+    text-transform: uppercase;
+}
+.pos-slideshow-container .pos-loading {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	z-index: 99;
+	background: url(../images/loader.gif) no-repeat ;
+	top: 50%;
+	left: 50%;
+	margin: -8px 0 0 -8px;
+}
+
+
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+	width:100%;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;	
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+.nivo-caption {
+  position:absolute;
+ 	left:0; 
+ 	top:0;	
+	color:#fff;
+	width:100%;
+	z-index:8;
+}
+.nivo-html-caption {
+    display: none;
+}
+.bannersequence{
+	clear:bold;
+}
+.pos_description{
+
+}
+.bannerSlideshow3{
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.bannerSlideshow3 h2{
+    background-color: rgba(61, 70, 90, 0.4);
+    color: #ffffff;
+    font-family: "Ubuntu",sans-serif;
+    font-size: 30px;
+    letter-spacing: 10px;
+    line-height: 30px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+	display:inline-block;
+	clear:both;
+	margin-bottom: 15px;
+	font-weight:bold;
+}
+.bannerSlideshow3 p{
+    background-color: rgba(61, 70, 90, 0.4);
+    clear: both;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Ubuntu",sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.bannerSlideshow1 a.title,
+.bannerSlideshow2 a.title,
+.bannerSlideshow3 a.title{
+    border: 2px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-family: "Ubuntu",sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 35px;
+    padding: 0 20px 0 15px;
+    text-transform: uppercase;
+}
+.bannerSlideshow1 a.title:after,
+.bannerSlideshow2 a.title:after,
+.bannerSlideshow3 a.title:after{
+	content:"\f0da";
+    font-family: fontawesome;
+    font-size: 14px;
+	margin-left:15px;
+}
+.bannerSlideshow1 a.title:hover,
+.bannerSlideshow2 a.title:hover,
+.bannerSlideshow3 a.title:hover{
+	border: 2px solid #5bd77b;
+	background:#5bd77b;
+	color:#fff;
+}
+.bannerSlideshow3 h2 strong{
+	color:#5bd77b;
+}
+.bannerSlideshow1{
+    left: 60%;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top:0;
+	padding-top:30px;
+}
+.bannerSlideshow2 h2.title1,
+.bannerSlideshow1 h2.title1{
+    background-color: rgba(49, 56, 72, 0.298);
+    clear: both;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Ubuntu",sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+	font-size: 28px;
+}
+.bannerSlideshow1 ul ,
+.bannerSlideshow2 ul {overflow:hidden;margin:0;}
+
+.bannerSlideshow1 ul li,
+.bannerSlideshow2 ul li{
+    background-color: rgba(49, 56, 72, 0.298);
+    clear: both;
+    color: #ffffff;
+    display:block;
+	float:left;
+    font-family: "Ubuntu",sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+	font-size:16px;
+	font-weight: normal;
+}
+.bannerSlideshow1 ul li:before{
+	font-family: fontawesome;
+	margin-right: 10px;
+}
+.bannerSlideshow1 ul li.item1:before{content: "\f0c3";}
+.bannerSlideshow1 ul li.item2:before{content: "\f10b";}
+.bannerSlideshow1 ul li.item3:before{content: "\f085";}
+.bannerSlideshow1 ul li.item4:before{content: "\f13c";}
+
+.bannerSlideshow2 ul li{
+	float:right;
+}
+.bannerSlideshow2{
+    left: 0;
+    position: absolute;
+    right: 60%;
+    text-align: right;
+    top:0;
+	padding-top:30px;
+}
+.bannerSlideshow1 h2.title1{
+	-webkit-animation: fadeInRight 300ms ease-in-out;
+	-moz-animation: fadeInRight 300ms ease-in-out;
+	-ms-animation: fadeInRight 300ms ease-in-out;
+	animation: fadeInRight 300ms ease-in-out;
+}
+.bannerSlideshow1 ul li.item1{
+	-webkit-animation: bounceInRight 600ms ease-in-out;
+	-moz-animation: bounceInRight 600ms ease-in-out;
+	-ms-animation: bounceInRight 600ms ease-in-out;
+	animation: bounceInRight 600ms ease-in-out;
+}
+.bannerSlideshow1 ul li.item2{
+	-webkit-animation: bounceInRight 900ms ease-in-out;
+	-moz-animation: bounceInRight 900ms ease-in-out;
+	-ms-animation: bounceInRight 900ms ease-in-out;
+	animation: bounceInRight 900ms ease-in-out;
+}
+.bannerSlideshow1 ul li.item3{
+	-webkit-animation: bounceInRight 1200ms ease-in-out;
+	-moz-animation: bounceInRight 1200ms ease-in-out;
+	-ms-animation: bounceInRight 1200ms ease-in-out;
+	animation: bounceInRight 1200ms ease-in-out;
+}
+.bannerSlideshow1 ul li.item4{
+	-webkit-animation: bounceInRight 1500ms ease-in-out;
+	-moz-animation: bounceInRight 1500ms ease-in-out;
+	-ms-animation: bounceInRight 1500ms ease-in-out;
+	animation: bounceInRight 1500ms ease-in-out;
+}
+.bannerSlideshow1 a.title{
+	-webkit-animation: bounceInRight 1800ms ease-in-out;
+	-moz-animation: bounceInRight 1800ms ease-in-out;
+	-ms-animation: bounceInRight 1800ms ease-in-out;
+	animation: bounceInRight 1800ms ease-in-out;
+}
+/* ###################### */
+.bannerSlideshow2 h2.title1{
+	-webkit-animation: bounceInDown 500ms ease-in-out;
+	-moz-animation: bounceInDown 500ms ease-in-out;
+	-ms-animation: bounceInDown 500ms ease-in-out;
+	animation: bounceInDown 500ms ease-in-out;
+}
+.bannerSlideshow2 ul li.item1{
+	-webkit-animation: bounceInDown 800ms ease-in-out;
+	-moz-animation: bounceInDown 800ms ease-in-out;
+	-ms-animation: bounceInDown 800ms ease-in-out;
+	animation: bounceInDown 800ms ease-in-out;
+}
+.bannerSlideshow2 ul li.item2{
+	-webkit-animation: bounceInDown 1100ms ease-in-out;
+	-moz-animation: bounceInDown 1100ms ease-in-out;
+	-ms-animation: bounceInDown 1100ms ease-in-out;
+	animation: bounceInDown 1100ms ease-in-out;
+}
+.bannerSlideshow2 ul li.item3{
+	-webkit-animation: bounceInDown 1400ms ease-in-out;
+	-moz-animation: bounceInDown 1400ms ease-in-out;
+	-ms-animation: bounceInDown 1400ms ease-in-out;
+	animation: bounceInDown 1400ms ease-in-out;
+}
+.bannerSlideshow2 ul li.item4{
+	-webkit-animation: bounceInDown 1700ms ease-in-out;
+	-moz-animation: bounceInDown 1700ms ease-in-out;
+	-ms-animation: bounceInDown 1700ms ease-in-out;
+	animation: bounceInDown 1700ms ease-in-out;
+}
+.bannerSlideshow2 a.title{
+	-webkit-animation: bounceInDown 2000ms ease-in-out;
+	-moz-animation: bounceInDown 2000ms ease-in-out;
+	-ms-animation: bounceInDown 2000ms ease-in-out;
+	animation: bounceInDown 2000ms ease-in-out;
+}
+
+/* #################### */
+.bannerSlideshow3 h2{
+	-webkit-animation: rollIn 200ms ease-in-out;
+	-moz-animation: rollIn 200ms ease-in-out;
+	-ms-animation: rollIn 200ms ease-in-out;
+	animation: rollIn 200ms ease-in-out;
+}
+.bannerSlideshow3 p{
+	-webkit-animation: rollIn 600ms ease-in-out;
+	-moz-animation: rollIn 600ms ease-in-out;
+	-ms-animation: rollIn 600ms ease-in-out;
+	animation: rollIn 600ms ease-in-out;
+}
+.bannerSlideshow3  a.title{
+	-webkit-animation: rollIn 1000ms ease-in-out;
+	-moz-animation: rollIn 1000ms ease-in-out;
+	-ms-animation: rollIn 1000ms ease-in-out;
+	animation: rollIn 1000ms ease-in-out;
+}
+@media (min-width: 1440px) {
+	.bannerSlideshow3{
+		top:40px;
+	}
+	.bannerSlideshow1,
+	.bannerSlideshow2{
+		padding-top:80px;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1280px)  {
+	.bannerSlideshow3 h2{
+		padding: 5px 20px;
+		font-size: 25px;
+	}
+	.bannerSlideshow3 p{
+		padding: 5px 10px;
+	}
+	.bannerSlideshow1 a.title, .bannerSlideshow2 a.title, .bannerSlideshow3 a.title{
+		font-size: 14px;
+		line-height: 30px;
+	}
+	
+	.bannerSlideshow2 h2.title1, .bannerSlideshow1 h2.title1{
+		font-size: 22px;
+	}
+	.bannerSlideshow1 ul li, .bannerSlideshow2 ul li{
+		font-size: 14px;
+		padding: 5px 10px;
+	}
+}
+
+@media (min-width: 980px) and (max-width: 1200px)  {
+	.bannerSlideshow3 h2{
+		padding: 5px 20px;
+		font-size: 20px;
+		margin:15px 0 5px;
+	}
+	.bannerSlideshow3 p{
+		padding: 5px 10px;
+		margin-bottom:5px;
+	}
+	.bannerSlideshow1 a.title, .bannerSlideshow2 a.title, .bannerSlideshow3 a.title{
+		font-size: 12px;
+		line-height: 30px;
+	}
+	
+	.bannerSlideshow2 h2.title1, .bannerSlideshow1 h2.title1{
+		font-size: 20px;
+		margin: 15px 0 5px;
+	}
+	.bannerSlideshow1 ul li, .bannerSlideshow2 ul li{
+		font-size: 14px;
+		padding: 5px 10px;
+		margin-bottom:5px;
+	}
+}
+@media (min-width: 768px) and (max-width: 980px)  {
+	.bannerSlideshow3 h2{
+		padding: 5px 20px;
+		font-size: 14px;
+		margin:5px 0 5px;
+	}
+	.bannerSlideshow3 p{
+		padding: 5px 10px;
+		margin-bottom:5px;
+		font-size: 10px;
+	}
+	.bannerSlideshow1 a.title, .bannerSlideshow2 a.title, .bannerSlideshow3 a.title{
+		font-size: 10px;
+		line-height: 20px;
+		padding: 0 10px;
+	}
+	
+	.bannerSlideshow2 h2.title1, .bannerSlideshow1 h2.title1{
+		font-size: 20px;
+		margin: 15px 0 5px;
+	}
+	.bannerSlideshow1 ul li, .bannerSlideshow2 ul li{
+		font-size: 14px;
+		padding: 5px 10px;
+		margin-bottom:5px;
+	}
+	.bannerSlideshow2,
+	.bannerSlideshow1{
+		padding:0;
+	}
+}
+@media (max-width: 767px){
+	.pos_description{
+		display:none;
+	}
+}

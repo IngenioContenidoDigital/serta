@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>possearchcategories</name>
+	<displayName><![CDATA[Buscar en categor&iacute;as]]></displayName>
+	<version><![CDATA[1.6]]></version>
+	<description><![CDATA[Agrega un campo de b&uacute;squeda r&aacute;pida en el sitio]]></description>
+	<author><![CDATA[Posthemes]]></author>
+	<tab><![CDATA[Search and filter]]></tab>
+	<confirmUninstall><![CDATA[Seguro que desea desinstalar?]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

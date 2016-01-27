@@ -1,0 +1,178 @@
+<pos_static_blocks>
+<!-- static block configuration -->
+	<block>
+		<id_posstaticblock>1</id_posstaticblock>
+		<identify>banner-static</identify>
+		<hook_position>blockPosition1</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>2</id_posstaticblock>
+		<identify>banner-static</identify>
+		<hook_position>blockPosition2</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>3</id_posstaticblock>
+		<identify>banner-static</identify>
+		<hook_position>blockPosition5</hook_position>
+		<name_module></name_module>
+		<hook_module></hook_module>
+		<posorder>0</posorder>
+		<insert_module>0</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	<block>
+		<id_posstaticblock>4</id_posstaticblock>
+		<identify>banner-static</identify>
+		<hook_position>blockDetailProduct</hook_position>
+		<name_module>blockbestsellers</name_module>
+		<hook_module>displayLeftColumn</hook_module>
+		<posorder>0</posorder>
+		<insert_module>1</insert_module>
+		<active>0</active>
+		<showhook>1</showhook>
+	</block>
+	
+<!-- block lang configuration -->
+
+	<block_lang>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>banner static blockPosition1</title>
+		<description>
+<![CDATA[
+<div class="static-block col-lg-4  col-md-4  col-sm-4 col-xs-12">
+<div class="img"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/banner_img1.jpg" /> </a></div>
+<div class="img"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/banner_img2.jpg" /> </a></div>
+<div class="img"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/banner_img3.jpg" /> </a></div>
+</div>
+]]>
+		</description>
+	</block_lang>		
+
+	<block_lang>
+		<id_posstaticblock>2</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>banner static blockPosition2</title>
+		<description>
+<![CDATA[
+<div class="static-block">
+<div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
+<div class="img"><a href="#"> <img src="/pos_hitstore/img/cms/banner_img6.jpg" alt="" /> </a></div>
+</div>
+</div>
+]]>
+		</description>
+	</block_lang>	
+	
+	<block_lang>
+		<id_posstaticblock>3</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>banner static left</title>
+		<description>
+<![CDATA[
+<div class="static-block ">
+<div class="img  col-lg-6 col-md-6  col-sm-6 col-xs-12"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/img_2_1.jpg" /> </a></div>
+<div class="img  col-lg-6  col-md-6  col-sm-6 col-xs-12"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/img_2_2.jpg" /> </a></div>
+</div>
+]]>
+		</description>
+	</block_lang>	
+	<block_lang>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_lang>1</id_lang>
+		<title>banner static blockPosition1</title>
+		<description>
+<![CDATA[
+
+]]>
+		</description>
+	</block_lang>	
+	
+<!-- language 2 -->
+
+	<block_lang>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>banner static blockPosition1</title>
+		<description>
+<![CDATA[
+<div class="static-block col-lg-4  col-md-4  col-sm-4 col-xs-12">
+<div class="img"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/banner_img1.jpg" /> </a></div>
+<div class="img"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/banner_img2.jpg" /> </a></div>
+<div class="img"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/banner_img3.jpg" /> </a></div>
+</div>
+]]>
+		</description>
+	</block_lang>		
+
+	<block_lang>
+		<id_posstaticblock>2</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>banner static blockPosition2</title>
+		<description>
+<![CDATA[
+<div class="static-block">
+<div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
+<div class="img"><a href="#"> <img src="/pos_hitstore/img/cms/banner_img6.jpg" alt="" /> </a></div>
+</div>
+</div>
+]]>
+		</description>
+	</block_lang>	
+	
+	<block_lang>
+		<id_posstaticblock>3</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>banner static left</title>
+		<description>
+<![CDATA[
+<div class="static-block ">
+<div class="img  col-lg-6 col-md-6  col-sm-6 col-xs-12"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/img_2_1.jpg" /> </a></div>
+<div class="img  col-lg-6  col-md-6  col-sm-6 col-xs-12"><a href="#"> <img alt="" src="/pos_hitstore/img/cms/img_2_2.jpg" /> </a></div>
+</div>
+]]>
+		</description>
+	</block_lang>	
+	<block_lang>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_lang>2</id_lang>
+		<title>banner static blockPosition1</title>
+		<description>
+<![CDATA[
+
+]]>
+		</description>
+	</block_lang>	
+
+<!-- block shop configuration -->
+	<block_shop>
+		<id_posstaticblock>1</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>2</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>3</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	<block_shop>
+		<id_posstaticblock>4</id_posstaticblock>
+		<id_shop>1</id_shop>
+	</block_shop>
+	
+</pos_static_blocks>

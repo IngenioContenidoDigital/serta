@@ -18,3 +18,5 @@
 /config/settings.inc.php
 /backupDB
 *.tgz
+/download/*
+/upload/*

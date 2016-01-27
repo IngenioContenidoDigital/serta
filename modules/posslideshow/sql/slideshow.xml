@@ -1,0 +1,72 @@
+<pos_slideshow>
+<!-- slideshow  configuration -->
+	<slideshow>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<porder>1</porder>
+		<active>1</active>
+	</slideshow>
+	<slideshow>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<porder>1</porder>
+		<active>1</active>
+	</slideshow>
+		
+<!-- language 1 -->
+	<slideshow_lang>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<id_lang>1</id_lang>
+		<title>Excepteur sint occaecat</title>
+		<link>#</link>
+		<description>
+		<![CDATA[
+		]]>
+		</description>
+	</slideshow_lang>
+	<slideshow_lang>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<id_lang>1</id_lang>
+		<title>Excepteur sint occaecat</title>
+		<link>#</link>
+		<description>
+		<![CDATA[
+]]>
+		</description>
+	</slideshow_lang>
+		
+	
+	
+
+	
+<!--  language 2  -->
+	<slideshow_lang>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<id_lang>2</id_lang>
+		<title>Excepteur sint occaecat</title>
+		<link>#</link>
+		<description>
+		<![CDATA[
+		]]>
+		</description>
+	</slideshow_lang>
+	<slideshow_lang>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<id_lang>2</id_lang>
+		<title>Excepteur sint occaecat</title>
+		<link>#</link>
+		<description>
+		<![CDATA[
+]]>
+		</description>
+	</slideshow_lang>
+	
+<!-- slideshop configuration -->
+	<slideshow_shop>
+		<id_pos_slideshow>3</id_pos_slideshow>
+		<id_shop>1</id_shop>
+	</slideshow_shop>
+    <slideshow_shop>
+		<id_pos_slideshow>4</id_pos_slideshow>
+		<id_shop>1</id_shop>
+	</slideshow_shop>
+	
+</pos_slideshow>

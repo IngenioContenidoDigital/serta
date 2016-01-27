@@ -1,0 +1,22 @@
+/* Block newsletter */
+#newsletter_block_left .form-group{
+	padding-top:15px;
+	position:relative;
+}
+#newsletter_block_left .form-group #newsletter-input{
+	background: #555555;
+    border-color: #555555;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 35px;
+}
+#newsletter_block_left .form-group .btn{
+	background: #008dc7;
+    border-color: #008dc7;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 35px;
+}
+/*# sourceMappingURL=blocknewsletter.css.map */
