@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>tmblocksearch</name>
-	<displayName><![CDATA[TM - Quick search block]]></displayName>
+	<displayName><![CDATA[TM - Bloque de busqueda r&aacute;pida]]></displayName>
 	<version><![CDATA[1.5.3]]></version>
-	<description><![CDATA[Adds a quick search field to your website.]]></description>
+	<description><![CDATA[Agrega un campo de b&uacute;squeda r&aacute;pida al sitio]]></description>
 	<author><![CDATA[Templatemela]]></author>
 	<tab><![CDATA[search_filter]]></tab>
 	<is_configurable>0</is_configurable>
