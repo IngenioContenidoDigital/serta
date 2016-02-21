@@ -85,8 +85,7 @@
   font: 400 13px/22px "Roboto", Helvetica, sans-serif;
   color: #707070;
   display: block;
-  padding: 6px 10px;
-  text-transform: uppercase;
+  padding: 6px 10px; 
 }
 .sf-menu > li.sfHover > a,
 .sf-menu > li > a:hover, .sf-menu > li.sfHoverForce > a {
@@ -173,7 +172,7 @@ ul.sf-menu li li li.sfHover ul {
   width: 100%;
 }
 .sf-menu > li > ul > li > a {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font: 400 13px/20px "Roboto", Helvetica, sans-serif;
   color: #707070;
 }
@@ -244,7 +243,7 @@ ul.sf-menu li li li.sfHover ul {
     display: block;
     cursor: pointer;
     font: 400 15px/21px "Roboto", Helvetica, sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: #1f2022;
     display: block;
     padding: 14px 20px 14px 0;

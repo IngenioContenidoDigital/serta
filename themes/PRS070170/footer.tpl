@@ -49,11 +49,11 @@
         <script>
             $(document).ready(function(){
                 $('a[title="iSeries"]').first().html('iSeries<br><img src="/img/cms/Serta/iseries.jpg" alt="" />');
-                $('a[title="iSeries"]').first().after('<p style="font-size:13px; text-transform:capitalize; text-align:justify; width: 175px;">Nuestros colchones combinan la &uacute;ltima tecnolog&iacute;a de espumas inteligentes y resortes.</p>');
+                $('a[title="iSeries"]').first().after('<p style="font-size:13px; text-transform:capitalize; width: 180px;">Nuestros colchones combinan la &uacute;ltima tecnolog&iacute;a de espumas inteligentes y resortes.</p>');
                 $('a[title="iSeries"]').first().parent().css({'margin-right':'15px', 'border-right': '1px rgba(0,0,0,0.15) solid', 'border-left':'1px rgba(255,255,255,0.7) solid','width':'200px','padding':'5px 5px 5px 5px'});
                 
                 $('a[title="iComfort"]').first().html('iComfort<br><img src="/img/cms/Serta/icomfort.jpg" alt="" />');
-                $('a[title="iComfort"]').first().after('<p style="font-size:13px; text-transform:capitalize; text-align:justify; width: 175px;">Serta&reg; con lo &uacute;ltimo en tecnolog&iacute;a de espumas inteligentes, brinda mayor soporte y confort.</p>');
+                $('a[title="iComfort"]').first().after('<p style="font-size:13px; text-transform:capitalize; width: 180px;">Serta&reg; con lo &uacute;ltimo en tecnolog&iacute;a de espumas inteligentes, brinda mayor soporte y confort.</p>');
                 $('a[title="iComfort"]').first().parent().css({'margin-right':'15px', 'border-right': '1px rgba(0,0,0,0.15) solid', 'border-left':'1px rgba(255,255,255,0.7) solid','width':'200px','padding':'5px 5px 5px 5px'});
                 
                 $('a[title="Perfect sleeper"]').first().html('Perfect Sleeper<br><img src="/img/cms/Serta/perfect-sleeper.jpg" alt="" />');
@@ -61,9 +61,9 @@
                 $('a[title="Perfect sleeper"]').first().parent().css({'margin-right':'15px', 'border-right': '1px rgba(0,0,0,0.15) solid', 'border-left':'1px rgba(255,255,255,0.7) solid','width':'200px','padding':'5px 5px 5px 5px'});
                 
                 $('a[title="Sertapedic"]').first().html('Sertapedic<br><img src="/img/cms/Serta/Sertapedic.jpg" alt="" />');
-                $('a[title="Sertapedic"]').first().after('<p style="font-size:13px; text-transform:capitalize; text-align:justify; width: 175px;">La colecci&oacute;n de colchones Sertapedic&reg; est&aacute; dise&ntilde;ada para ofrecer la calidad que se espera de la marca Serta&reg; a un precio excepcional.</p>');
+                $('a[title="Sertapedic"]').first().after('<p style="font-size:13px; text-transform:capitalize; width: 180px;">La colecci&oacute;n de colchones Sertapedic&reg; est&aacute; dise&ntilde;ada para ofrecer la calidad que se espera de la marca Serta&reg; a un precio excepcional.</p>');
                 $('a[title="Sertapedic"]').first().parent().css({'margin-right':'15px', 'border-right': '1px rgba(0,0,0,0.15) solid', 'border-left':'1px rgba(255,255,255,0.7) solid','width':'200px','padding':'5px 5px 5px 5px'});
-            })
+            });
             
             $(document).scroll(function(){
                 /*

@@ -23,5 +23,5 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {if isset($images) AND $images}
-	<img class="replace-2x img-responsive img_1" src="{$link->getImageLink($link_rewrite, $images.0, 'home_default')|escape:'html':'UTF-8'}" alt="" title="" itemprop="image" />
+	<img class="replace-2x img-responsive img_1" style="background:#FFF;" src="{$link->getImageLink($link_rewrite, $images.0, 'home_default')|escape:'html':'UTF-8'}" alt="" title="" itemprop="image" />
 {/if}

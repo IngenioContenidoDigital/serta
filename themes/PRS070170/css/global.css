@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans);
 
 @charset "UTF-8";
 html, body, div, span, applet, object, iframe,
@@ -17,7 +17,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   vertical-align: baseline;
 }
@@ -308,8 +308,9 @@ textarea {
 }
 
 a {
-  color: #1f2022;
+  color:#002b5a;
   text-decoration: none;
+  text-transform: none;
 }
 a:hover, a:focus {
   color: #1f2022;
@@ -437,8 +438,9 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  color:#002b5a;
+  font-weight: normal;
   line-height: 1.1;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
@@ -7307,7 +7309,10 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Roboto", Helvetica, sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
+  color:#002b5a;
+  font-weight: normal;
+  line-height: 1.1;
 }
 
 .btn:active, .btn.active, .form-control:focus {
@@ -7590,6 +7595,8 @@ label.required:before {
 }
 
 b, strong {
+  font-family: 'Open Sans', sans-serif;
+  color:#002b5a;
   font-weight: 500;
 }
 
