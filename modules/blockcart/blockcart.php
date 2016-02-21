@@ -191,6 +191,7 @@ class BlockCart extends Module
 			parent::install() == false
 			|| $this->registerHook('top') == false
 			|| $this->registerHook('header') == false
+			|| $this->registerHook('displayTopColumn') == false
 			|| $this->registerHook('actionCartListOverride') == false
 			|| Configuration::updateValue('PS_BLOCK_CART_AJAX', 1) == false
 			|| Configuration::updateValue('PS_BLOCK_CART_XSELL_LIMIT', 12) == false
@@ -258,6 +259,12 @@ class BlockCart extends Module
 			$this->context->controller->addJqueryPlugin(array('scrollTo', 'serialScroll', 'bxslider'));
 		}
 	}
+
+	public function hookdisplayTopColumn($params){
+		$params['blockcart_top'] = 'true';
+		return $this->hookRightColumn($params);
+	}
+
 
 	public function hookTop($params)
 	{

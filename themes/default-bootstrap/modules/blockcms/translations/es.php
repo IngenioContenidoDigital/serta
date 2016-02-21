@@ -70,3 +70,4 @@ $_MODULE['<{blockcms}default-bootstrap>form_f2a6c498fb90ee345d997f888fce3b18'] =
 $_MODULE['<{blockcms}default-bootstrap>form_49ee3087348e8d44e1feda1917443987'] = 'Nombre';
 $_MODULE['<{blockcms}default-bootstrap>form_f7c68d40f8727c658e821c6e6d56af07'] = 'No hay páginas creadas';
 $_MODULE['<{blockcms}default-bootstrap>blockcms_3cb29f0ccc5fd220a97df89dafe46290'] = '¡Lo más vendido!';
+$_MODULE['<{blockcms}default-bootstrap>blockcms_8be39233fce812574e94aa277f5a2e32'] = '[1] %3$s %2$s - Software para Ecommerce de %1$s [/1]';

@@ -1,0 +1,69 @@
+@import "compass";
+@import "theme_variables";
+.header_user_info {
+	float: right;
+	position: relative;
+	background-color: #52555b;
+	padding: 0px;
+	margin-top: 0px;
+	clear: both;
+	.tm_userinfotitle{
+		background-color: #52555b;
+		height: 45px;
+		position: absolute;
+		right:130px;
+		top: 38px;
+		z-index: 1;
+		width: 45px;
+		@media (max-width: $screen-md-max){right: 125px;}
+		@media (max-width: $screen-sm-max){right: 0; top: 87px;}
+		@media (max-width: $screen-xs-max){ top: 115px;}
+		@media (max-width: $screen-xs){ top: 180px;}
+		&:before{
+			content:"\f007";
+			line-height: 42px;
+			font-size: 16px;
+			padding: 17px;
+			color: #fff;
+			font-family: $font-icon;	
+		}
+		&:hover{
+			background-color: #25aef5;
+			cursor: pointer;	
+		}
+	}
+	ul {
+		margin:0;
+		padding:5px 0;
+		position: absolute;
+		top: 92px;
+		border: 1px solid $common-border-color;
+		display: none;
+		width: 130px;
+		right: 130px;
+		z-index: 5;
+		background-color: #fff;
+		transition: none;
+		@media (max-width: $screen-md-max){right: 125px;}
+		@media (max-width: $screen-sm-max){top: 141px; right: 0;}
+		@media (max-width: $screen-xs-max){top: 169px;}
+		@media (max-width: $screen-xs){top: 234px;}
+	li {
+	 	float:left;
+		a {
+			color: $base-body-color;
+			font-weight: 400;
+			display: block;
+			padding: 4px 15px;
+			cursor: pointer;
+			font-size: 12px;
+			@media (max-width: $screen-xs) {
+				font-size: 11px;
+			}
+			&:hover, &.active {
+				color:$link-hover-color;
+			}
+		}
+	}
+	}
+}

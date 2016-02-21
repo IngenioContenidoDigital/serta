@@ -44,6 +44,9 @@ class UploaderCore
 
     public function setAcceptTypes($value)
     {
+        if (is_array($value) && count($value)) {
+            $value = array_map(array('Tools', 'strtolower'), $value);
+        }
         $this->_accept_types = $value;
         return $this;
     }
@@ -225,7 +228,7 @@ class UploaderCore
             case 8:
                 $error = Tools::displayError('A PHP extension stopped the file upload');
                 break;
-            default;
+            default:
                 break;
         }
         return $error;
@@ -234,6 +237,10 @@ class UploaderCore
     protected function validate(&$file)
     {
         $file['error'] = $this->checkUploadError($file['error']);
+
+        if ($file['error']) {
+            return false;
+        }
 
         $post_max_size = $this->getPostMaxSizeBytes();
 
@@ -250,7 +257,7 @@ class UploaderCore
         $types = $this->getAcceptTypes();
 
         //TODO check mime type.
-        if (isset($types) && !in_array(pathinfo($file['name'], PATHINFO_EXTENSION), $types)) {
+        if (isset($types) && !in_array(Tools::strtolower(pathinfo($file['name'], PATHINFO_EXTENSION)), $types)) {
             $file['error'] = Tools::displayError('Filetype not allowed');
             return false;
         }

@@ -2,7 +2,7 @@
 <module>
 	<name>vatnumber</name>
 	<displayName><![CDATA[N&uacute;mero de IVA europeo]]></displayName>
-	<version><![CDATA[1.8.0]]></version>
+	<version><![CDATA[1.8.1]]></version>
 	<description><![CDATA[Te permite introducir n&uacute;mero VAT intercomunitario al crear la direcci&oacute;n. Debes rellenar el campo de empresa para introducir el n&uacute;mero VAT.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[billing_invoicing]]></tab>

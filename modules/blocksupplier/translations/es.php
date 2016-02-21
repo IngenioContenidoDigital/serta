@@ -9,7 +9,7 @@ $_MODULE['<{blocksupplier}prestashop>blocksupplier_85ab0c0d250e58397e95c96277a3f
 $_MODULE['<{blocksupplier}prestashop>blocksupplier_914b0cd4e4aa7cba84a3fd47b880fd2a'] = 'Por favor, active al menos un tipo de lista.';
 $_MODULE['<{blocksupplier}prestashop>blocksupplier_f38f5974cdc23279ffe6d203641a8bdf'] = 'Ajustes actualizados.';
 $_MODULE['<{blocksupplier}prestashop>blocksupplier_f4f70727dc34561dfde1a3c529b6205c'] = 'Ajustes';
-$_MODULE['<{blocksupplier}prestashop>blocksupplier_bfdff752293014f11f17122c92909ad5'] = 'Use una lista de texto plano';
+$_MODULE['<{blocksupplier}prestashop>blocksupplier_bfdff752293014f11f17122c92909ad5'] = 'Use una lista de texto sin formato';
 $_MODULE['<{blocksupplier}prestashop>blocksupplier_78b2098aa1d513b5e1852b3140c7ee26'] = 'Mostrar proveedores en lista de texto plano.';
 $_MODULE['<{blocksupplier}prestashop>blocksupplier_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activado';
 $_MODULE['<{blocksupplier}prestashop>blocksupplier_b9f5c797ebbf55adccdd8539a65a0241'] = 'Desactivado';

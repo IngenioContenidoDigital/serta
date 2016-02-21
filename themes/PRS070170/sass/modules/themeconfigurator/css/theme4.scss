@@ -1,0 +1,240 @@
+@import "compass";
+@import "theme_variables";
+
+$defult-bkgcolor:		#fff;
+$defultother-bkgcolor:	#EAC12D;
+$topandbottom-bkgcolor: #A2A2A2;
+
+$color1-style1:         #fff;
+$color2-style1:         #FFF;
+$color3-style1:         #333;
+$color5-style1:         #FFF;
+$base-border-color:		#C6C7BB;
+
+body
+{
+	background:$defult-bkgcolor;
+}
+
+//-------- HEADER
+#header {
+background:none;	
+.header-row {
+  .shop-phone{
+	  color:$color5-style1;
+	  text-shadow:0 1px #404040;
+	i,
+	strong{color:#aaa} 	
+	  } 		  	
+}
+	.nav ,.sf-menu,.sf-menu > li > ul,.sf-menu li ul li ul{
+		background:$topandbottom-bkgcolor;
+		color:$color2-style1;
+	}
+}		
+
+
+#header_user #shopping_cart a{
+background:$color1-style1; 
+color:$color5-style1;	
+	&:after{color:$color5-style1}
+	&:hover{color:$color5-style1;
+	text-shadow:0 1px #333;
+	background:$color3-style1}		 
+}
+
+//-------- columns-container
+
+#home-page-tabs,.nav-tabs{
+background:none;
+>li{border-color:$base-border-color;background:$color5-style1;}
+  > li.active a, 
+  > li a:hover{
+	background:$defultother-bkgcolor !important;
+	color:$color5-style1  !important;;
+	 }
+}	 
+
+.new,
+.sale,
+.new-label
+{background:$defultother-bkgcolor;
+color:$color5-style1;
+border:none;
+&:before,
+	&:after{
+			border-color: $defultother-bkgcolor  transparent   transparent transparent ;			
+		}	
+}
+
+   ul.product_list.grid > li .product-container{
+  
+    .product-image-container{
+  	   background:$color5-style1;
+       .product_img_link{
+        background:#f1e8e3;
+        img{
+          background:#f1e8e3;
+        }
+       }   
+     }
+   }
+
+a:hover,a:focus,
+.price,
+.price.product-price,
+.content_sortPagiBar .display li.selected i, 
+.content_sortPagiBar .display_m li.selected i,
+.content_sortPagiBar .display li a:hover i, 
+.content_sortPagiBar .display_m li a:hover i,
+.top-pagination-content ul.pagination li.active > span, 
+.bottom-pagination-content ul.pagination li.active > span,
+.our_price_display,
+.pagination > li > a:hover,
+.customNavigation a,
+#tmproduct_tab_block .col-xs-12 #productpage_tab li a:active, #tmproduct_tab_block .col-xs-12 #productpage_tab li a:hover,#tmproduct_tab_block .col-xs-12 			#productpage_tab .active a,
+.footer-container #footer h4,
+.footer-container #footer a:hover ,
+#view_scroll_left:hover:before, #view_scroll_right:hover:before,
+#view_scroll_left:hover:before, #view_scroll_right:hover:before,
+.pb-left-column #image-block #view_full_size .span_link:hover:after,
+#layer_cart .cross:hover,
+.footer-container #footer #block_contact_infos > div ul li i,
+.footer-container #footer h4 a
+{color:$defultother-bkgcolor !important;}
+	
+.old-price{color:#b1b0b0}
+
+.button.lnk_view:hover span{color:$color5-style1;background:$defultother-bkgcolor;border-color:$defultother-bkgcolor} 
+
+#cmsinfo_block em{background:$defultother-bkgcolor;text-shadow:0 1px #4e3c30;}
+   
+.footer-container {	
+	   background:$topandbottom-bkgcolor;
+	   border-top: 1px solid #eee;
+		@media (min-width: $screen-sm) { // min 768px
+		
+			#footer{
+				.row{
+					background:none;
+				}
+			}
+		}
+}
+
+.footer-container #footer,#block_top_menu .top_menu_inner{background:none !important;}
+.footer-container #footer a:hover{color:$defultother-bkgcolor}	
+.footer-container #footer #block_contact_infos > div ul li{color:$color5-style1}	
+	
+
+/*============ Extra Added By Megnor =====*/
+
+.sf-menu > li.sfHover > a, .sf-menu > li > a:hover, .sf-menu > li.sfHoverForce > a {
+    color: #000;
+}
+
+	
+	
+#cmsinfo_block,
+#cmsinfo_block > div + div
+{
+	border-color:$base-border-color;
+}     
+#subcategories ul li:hover .subcategory-image a { border-color:$defultother-bkgcolor;}	
+/*=================== Button Setting ==================*/
+
+.button.ajax_add_to_cart_button ,.button.lnk_view,.button.button-small,.button.button-medium,.button.exclusive-medium,
+.cart_navigation .standard-checkout, #button_order_cart, #layer_cart .button-container .button-medium,
+.button.ajax_add_to_cart_button ,.button.lnk_view,.button.button-small,.button.button-medium,.button.exclusive-medium
+{
+	color: $button-text-color !important;
+	border-color:$defultother-bkgcolor !important;
+	@include border-radius(3px);
+	span {
+		padding: 8px 10px;
+		display: block;
+		background: $defultother-bkgcolor !important;
+	}
+	&:hover {
+		border-color:$topandbottom-bkgcolor !important;
+		span {
+			filter: none;
+			background:$topandbottom-bkgcolor !important;
+		}
+	}
+}
+
+.box-info-product {
+	.exclusive{
+		border-color: $defultother-bkgcolor;
+		background:$defultother-bkgcolor;
+		&:before{
+			border-color:$defultother-bkgcolor;
+			border:none;
+		}
+		span{
+			border-color:$defultother-bkgcolor;
+  			border:none;
+		}
+		&:hover{
+			background:$topandbottom-bkgcolor;
+		}
+	}
+}
+
+.cart_navigation .button-exclusive
+{
+	border-color:$defultother-bkgcolor !important;
+	background:$defultother-bkgcolor;
+}
+.cart_navigation .button-exclusive:hover, .cart_navigation .button-exclusive:focus, .cart_navigation .button-exclusive:active
+{
+	border-color:$topandbottom-bkgcolor !important;
+	background:$topandbottom-bkgcolor;
+}
+
+
+ul.step li.step_current{background:$defultother-bkgcolor;}
+.accessories-block .exclusive span{background:none !important;}
+#home-page-tabs > li.active a div, #home-page-tabs > li a:hover div,.nav-tabs > li.active a div, .nav-tabs > li:hover a div {border-top-color:$defultother-bkgcolor;}
+.customNavigation a.next i:hover:before,.customNavigation a.prev i:hover:before{color:$defultother-bkgcolor !important;}
+.tm-tabcontent #productpage_tab li,.nav > li > a{background:$defult-bkgcolor;}
+.footer_bottom{background:$defultother-bkgcolor;}
+
+.sf-menu li li li a:hover,.sf-menu > li{background:none !important;}
+#search_block_top .search_main{background:$color1-style1 !important; box-shadow:none !important; }
+#search_block_top .search_main .btn.button-search,#search_block_top .search_main .btn.button-search:hover {color:$defultother-bkgcolor;}
+ul.product_list.grid li .product-container, ul.tm-carousel li .product-container,.content_sortPagiBar{background:$defult-bkgcolor;}
+
+#left_column .block .title_block a, #left_column .block h4 a, #right_column .block .title_block a, #right_column .block h4 a,#left_column .block .title_block, #left_column .block h4, #right_column .block .title_block, #right_column .block h4  
+{background-color:#A2A2A2;color:$color5-style1;}
+
+#currencies-block-top div.current,
+#languages-block-top div.current,
+#contact-link a,
+.shop-phone,
+.header_user_info ul li a,
+#languages-block-top ul li.selected, #languages-block-top ul li:hover a,
+.sf-menu > li > a,
+.sf-menu > li > ul > li > a,
+.footer-container #footer a,
+.footer-container #footer #block_contact_infos > div ul li,
+.sf-menu li ul li ul a
+{
+	color:$color2-style1 !important;
+} 
+
+#languages-block-top div.current:hover, #languages-block-top div.current.active,
+#languages-block-top ul li.selected, #languages-block-top ul li:hover a,
+#currencies-block-top div.current:hover, #currencies-block-top div.current.active,
+#currencies-block-top ul li.selected, #currencies-block-top ul li:hover a,
+#contact-link a:hover, #contact-link a.active,
+.header_user_info ul li a:hover, .header_user_info ul li a.active,
+#search_block_top .btn.button-search,
+.sf-menu > li.sfHover > a, .sf-menu > li > a:hover, .sf-menu > li.sfHoverForce > a,
+.sf-menu > li > ul > li > a:hover,
+.sf-menu li ul li ul a:hover
+{
+	color:$color5-style1 !important;;
+	background:$defultother-bkgcolor !important;
+}

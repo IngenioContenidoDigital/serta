@@ -8,7 +8,7 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_ba457fab18d697d978befb95e
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_396c88991101b5ca362932952293d291'] = '¿Está seguro de querer eliminar todos sus contactos?';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c3987e4cac14a8456515f0d200da04ee'] = 'Todos los países';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_fa01fd956e87307bce4c90a0de9b0437'] = 'País del cliente';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_c0859b0a5241dff468da2a9a93c3284f'] = 'Aplicar un filtro al país del cliente.';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_7599b57d77ef1608b2f6da579794cc5b'] = 'Filtrar por país del cliente.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_2198f293f5e1e95dddeff819fbca0975'] = 'Suscritos a la newsletter';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_99006a61d48499231e1be92241cf772a'] = 'Filtro de suscriptores a la newsletter.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_7e3a51a56ddd2846e21c33f05e0aea6f'] = 'Todos los clientes';
@@ -52,11 +52,11 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_521f7e76a7d4f9e50c50bb945
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_1b09c341aa487e26dac94d2467b7f7e3'] = 'Filtra los clientes que se han suscrito al boletín de noticias o no, y quienes tienen cuenta o no.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_e8be50a6977f278040458abdb2b18229'] = 'Los clientes pueden suscribirse a su boletín de noticias cuando se registran, o introduciendo su correo electrónico en el bloque de boletín de noticias.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_847b0223c73ac0fec0d9df6539c7cad6'] = 'Todos los suscriptores';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_2eb05fb68ae560f1f25f46422dcfe9c2'] = 'Suscriptores con cuenta';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_f821fd15db9c1d946a449837c291fc68'] = 'Suscriptores sin cuenta';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_498bed86a7c58dcf1125dd21f40a6482'] = 'Filtrar clientes que aceptan recibir ofertas de socios o no.';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_6a6e00a19c8555bc40b4beefd71210b9'] = 'Suscriptores "opted-in" están de acuerdo en recibir ofertas de sus socios.';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_a307579714b75082f3f8734971b125cd'] = 'Suscriptores con cuenta';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_d0da5609e4aebc5d532de97511a5a34a'] = 'Suscriptores sin cuenta';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_6395c19dc5a1cef9ca125b9736358dc7'] = 'Suscriptores "opt-in"';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_498bed86a7c58dcf1125dd21f40a6482'] = 'Filtrar clientes que aceptan recibir ofertas de socios o no.';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_e72237358bd145d6dba764c39e53bba5'] = 'Suscriptores que expresamente están de acuerdo en recibir ofertas de sus socios.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_85d02b888be056b290282ab2021341dc'] = 'No suscriptores "opt-in"';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_dbb392a2dc9b38722e69f6032faea73e'] = 'Exportar un fichero .CSV';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_f6df4ad6dc4798f26d1f2460eef4f2e9'] = 'Buscar por dirección';
@@ -66,8 +66,8 @@ $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_13348442cc6a27032d2b4aa28
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_82e5e0bc0f9c776c98253d569c111c0f'] = 'Noy hay clientes a los que se aplique este filtro';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_644ecc2486a059ca16b001a77909bf40'] = 'El fichero .CSV ha sido exportado correctamente: %d clientes encontrados.';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_48e3d5f66961b621c78f709afcd7d437'] = 'Descargar el fichero';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_faa1115fbab933e7178ee43ce1590977'] = 'ATENCION: Si trata de abrir el fichero .CSV con Excel, no olvide seleccionar el UTF-8 para el encodage, si no aparecerán caracteres incorrectos';
-$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_81573e0ea79138f02fd2cee94786d7e9'] = 'Error: no se puede escribir';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_dca37b874cf34bd5ebcf1c2fdc59a8b4'] = 'ATENCIÓN: Cuando abra este archivo .csv con Excel, elija codificación UTF-8 para evitar caracteres extraños.';
+$_MODULE['<{blocknewsletter}prestashop>blocknewsletter_b40866b115d74009183e06fc86b5c014'] = 'Error: Acceso de escritura limitado';
 $_MODULE['<{blocknewsletter}prestashop>blocknewsletter_87b0ca57db642f4e7780174a6abdc37d'] = '¡No se encontraron resultados!';
 $_MODULE['<{blocknewsletter}prestashop>list_action_enable_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Activado';
 $_MODULE['<{blocknewsletter}prestashop>list_action_enable_b9f5c797ebbf55adccdd8539a65a0241'] = 'Desactivado';

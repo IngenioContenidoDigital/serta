@@ -52,7 +52,7 @@
 			</span>
 		</label>
 		<div class="col-lg-8">
-			{include file="controllers/products/input_text_lang.tpl"
+			{include file="controllers/products/textarea_lang.tpl"
 				languages=$languages
 				input_name='meta_description'
 				input_value=$product->meta_description

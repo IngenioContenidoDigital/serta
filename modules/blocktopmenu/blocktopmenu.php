@@ -68,6 +68,7 @@ class Blocktopmenu extends Module
         if (!parent::install() ||
             !$this->registerHook('header') ||
             !$this->registerHook('displayTop') ||
+            !$this->registerHook('displayTopColumn') ||
             !$this->registerHook('actionObjectCategoryUpdateAfter') ||
             !$this->registerHook('actionObjectCategoryDeleteAfter') ||
             !$this->registerHook('actionObjectCategoryAddAfter') ||
@@ -721,6 +722,28 @@ class Blocktopmenu extends Module
     }
 
     public function hookDisplayTop($param)
+    {
+        $this->user_groups = ($this->context->customer->isLogged() ?
+            $this->context->customer->getGroups() : array(Configuration::get('PS_UNIDENTIFIED_GROUP')));
+        $this->page_name = Dispatcher::getInstance()->getController();
+        if (!$this->isCached('blocktopmenu.tpl', $this->getCacheId())) {
+            if (Tools::isEmpty($this->_menu)) {
+                $this->makeMenu();
+            }
+
+            $shop_id = (int)$this->context->shop->id;
+            $shop_group_id = Shop::getGroupFromShop($shop_id);
+
+            $this->smarty->assign('MENU_SEARCH', Configuration::get('MOD_BLOCKTOPMENU_SEARCH', null, $shop_group_id, $shop_id));
+            $this->smarty->assign('MENU', $this->_menu);
+            $this->smarty->assign('this_path', $this->_path);
+        }
+
+        $html = $this->display(__FILE__, 'blocktopmenu.tpl', $this->getCacheId());
+        return $html;
+    }
+    
+    public function hookDisplayTopColumn($param)
     {
         $this->user_groups = ($this->context->customer->isLogged() ?
             $this->context->customer->getGroups() : array(Configuration::get('PS_UNIDENTIFIED_GROUP')));

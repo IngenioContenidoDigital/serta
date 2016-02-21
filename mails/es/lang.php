@@ -26,20 +26,8 @@ $_LANGMAIL['Password query confirmation'] = 'Confirmación de contraseña';
 $_LANGMAIL['Newsletter voucher'] = 'Voucher boletín de noticias';
 $_LANGMAIL['Newsletter confirmation'] = 'Confirmación de Boletín';
 $_LANGMAIL['Email verification'] = 'Verificación de correo';
-$_LANGMAIL['Your wishlist\'s link'] = 'Enlace a su lista de regalos';
-$_LANGMAIL['Message from %1$s %2$s'] = 'Mensaje desde %1$s %2$s';
-$_LANGMAIL['Your cart and your discount'] = 'Su carrito y descuento';
-$_LANGMAIL['Thanks for your order'] = '¡Gracias por su pedido!';
-$_LANGMAIL['You are one of our best customers'] = 'Gracias por ser uno de nuestros mejores clientes';
-$_LANGMAIL['We miss you'] = 'Le echamos de menos';
-$_LANGMAIL['Product available'] = 'Producto disponible';
-$_LANGMAIL['New order : #%d - %s'] = 'Nuevo pedido : #%d - %s';
-$_LANGMAIL['Product out of stock'] = 'Uno o más productos están agotados';
-$_LANGMAIL['Stock coverage'] = 'Cobertura de stock';
-$_LANGMAIL['New return from order #%d - %s'] = 'Nueva devolución del pedido #%d - %s';
-$_LANGMAIL['Your order has been changed'] = 'Su pedido se ha modificado';
-$_LANGMAIL['Referral Program'] = 'Programa de patrocinio';
-$_LANGMAIL['Congratulations!'] = '¡Enhorabuena!';
+$_LANGMAIL['Your wishlist\'s link'] = 'Enlace a su lista de deseos';
+$_LANGMAIL['Message from %1$s %2$s'] = 'Mensaje de %1$s %2$s';
 $_LANGMAIL['%1$s sent you a link to %2$s'] = '%1$s envió un link a %2$s';
 
 

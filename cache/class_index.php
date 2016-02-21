@@ -2905,13 +2905,13 @@
   ),
   'OrderConfirmationControllerCore' => 
   array (
-    'path' => 'override/controllers/front/OrderConfirmationController.php',
+    'path' => 'controllers/front/OrderConfirmationController.php',
     'type' => 'class',
     'override' => false,
   ),
   'OrderController' => 
   array (
-    'path' => 'override/controllers/front/OrderController.php',
+    'path' => '',
     'type' => 'class',
     'override' => false,
   ),
@@ -3529,7 +3529,7 @@
   ),
   'SearchController' => 
   array (
-    'path' => 'override/controllers/front/SearchController.php',
+    'path' => '',
     'type' => 'class',
     'override' => false,
   ),

@@ -8,7 +8,7 @@ $_MODULE['<{sekeywords}prestashop>sekeywords_8effa630c1740a748801b881acb90fa6'] 
 $_MODULE['<{sekeywords}prestashop>sekeywords_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guía';
 $_MODULE['<{sekeywords}prestashop>sekeywords_9ed50bd6876a9273f2192c224b87657b'] = 'Identifique las palabras claves externas en los motores de la búsqueda';
 $_MODULE['<{sekeywords}prestashop>sekeywords_7acbda50735929f05f6f463e05bc7ead'] = 'Una de las maneras más comunes de encontrar un sitio web a través de un motor de búsqueda.';
-$_MODULE['<{sekeywords}prestashop>sekeywords_4ad084c0b816ff9278765a00720caf32'] = 'La identificación de las palabras clave más populares escritos por sus visitantes nuevosle permite ver los productos que usted debe poner por delante si quiere atraer a más visitantes y clientes potenciales.';
+$_MODULE['<{sekeywords}prestashop>sekeywords_4ad084c0b816ff9278765a00720caf32'] = 'La identificación de las palabras clave más populares escritos por sus visitantes nuevos le permite ver los productos que debe poner por delante si quiere atraer a más visitantes y clientes potenciales.';
 $_MODULE['<{sekeywords}prestashop>sekeywords_359f9e79e746fa9f684e5cda9e60ca2e'] = '¿Cómo funciona?';
 $_MODULE['<{sekeywords}prestashop>sekeywords_ec2184245585ba979912af9e34d738c6'] = 'Cuando un visitante va a tu web, el servidor registra la URL de la web de la que viene esa persona. Este módulo analiza la URL y si encuentra una referencia de un servidor de búsqueda conocido, detecta las palabras clave.';
 $_MODULE['<{sekeywords}prestashop>sekeywords_ef79a74a2fd296e19e8cc58cdae91d43'] = 'Este módulo puede reconocer todos los motores de búsqueda listados en la página de estadísticas y motores de búsqueda de PrestaShop, ¡y tú puedes añadir más!';

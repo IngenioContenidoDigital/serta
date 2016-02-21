@@ -1,0 +1,140 @@
+.header_permentlink {
+  list-style-type: none;
+  float: right;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  clear: right;
+  top: 103px;
+  right: 0;
+  z-index: 9;
+}
+@media (max-width: 991px) {
+  .header_permentlink {
+    clear: none;
+    position: relative;
+    top: auto;
+  }
+}
+.header_permentlink #header_links {
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .header_permentlink #header_links {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    display: none;
+    right: 15px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 28px;
+    width: 157px;
+    z-index: 99;
+  }
+}
+@media (max-width: 480px) {
+  .header_permentlink #header_links {
+    left: 0;
+    right: auto;
+  }
+}
+.header_permentlink #header_links li {
+  float: left;
+  padding: 0;
+}
+@media (max-width: 991px) {
+  .header_permentlink #header_links li {
+    width: 100%;
+    margin: 0;
+    line-height: 30px;
+    padding: 3px 0;
+  }
+}
+.header_permentlink #header_links li a {
+  color: #707070;
+  line-height: 20px;
+  padding: 0 2px 0 14px;
+  text-decoration: none;
+  font-weight: 300;
+}
+@media (max-width: 991px) {
+  .header_permentlink #header_links li a {
+    float: left;
+    width: 100%;
+    border: none;
+    font-size: 12px;
+  }
+}
+.header_permentlink #header_links li a:hover {
+  color: #1f2022;
+}
+.header_permentlink #header_links li a:before {
+  border-left: 1px solid #aaa;
+  content: "";
+  display: block;
+  float: left;
+  height: 14px;
+  margin: 3px 0px 0 10px;
+  width: 1px;
+}
+@media (max-width: 991px) {
+  .header_permentlink #header_links li a:before {
+    border: none;
+    margin: 0;
+  }
+}
+.header_permentlink #header_links li:first-child a:before {
+  border: none;
+}
+.header_permentlink #header_links li#header_link_blog a {
+  padding-right: 0;
+}
+.header_permentlink #header_links li#header_link_bookmark {
+  display: none;
+}
+
+/*block permanent links right and left columns*/
+#permanent_links div {
+  border-bottom: 1px dotted #eee;
+}
+#permanent_links div a {
+  display: block;
+  padding: 7px 11px 5px 22px;
+  color: #333;
+  background: url(img/arrow_right_2.png) no-repeat 10px 10px;
+}
+
+/* block footer links */
+ul#footer_links {
+  clear: both;
+  text-align: center;
+  padding-bottom: 6px;
+}
+ul#footer_links li {
+  display: inline;
+  padding: 0 10px;
+}
+
+.header_permentlink .tm_permenu_inner {
+  cursor: pointer;
+  font-size: 0;
+  display: none;
+}
+@media (max-width: 991px) {
+  .header_permentlink .tm_permenu_inner {
+    display: block;
+  }
+}
+.header_permentlink .tm_permenu_inner .headertoggle_img:before {
+  content: "\f0c9";
+  display: block;
+  font-family: "FontAwesome";
+  line-height: 22px;
+  font-size: 17px;
+  position: relative;
+  top: -1px;
+  width: 30px;
+  height: 3px;
+}

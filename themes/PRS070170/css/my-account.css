@@ -1,0 +1,52 @@
+#my-account .addresses-lists {
+  margin-bottom: 30px;
+}
+#my-account ul.myaccount-link-list {
+  margin: 0;
+}
+#my-account ul.myaccount-link-list li {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+#my-account ul.myaccount-link-list li a {
+  display: block;
+  overflow: hidden;
+  font: 600 16px/20px "Roboto", Helvetica, sans-serif;
+  color: #707070;
+  background: #fff;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid #e5e5e5;
+}
+#my-account ul.myaccount-link-list li a i {
+  font-size: 17px;
+  color: #707070;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 52px;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+  border: none;
+}
+#my-account ul.myaccount-link-list li a span {
+  display: block;
+  padding: 13px 15px 15px 17px;
+  overflow: hidden;
+  border-left: 1px solid #e5e5e5;
+  margin-left: 52px;
+  font-size: 14px;
+  font-weight: normal;
+}
+#my-account ul.myaccount-link-list li a:hover {
+  filter: none;
+  border: 1px solid #1f2022;
+}
+#my-account ul.myaccount-link-list li a:hover i {
+  color: #1f2022;
+}
+#my-account ul.myaccount-link-list li a:hover span {
+  border-color: #1f2022;
+  color: #1f2022;
+}

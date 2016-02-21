@@ -1,0 +1,90 @@
+.shop-phone {
+  float: right;
+  padding: 0px 0 8px 24px;
+  margin-top: 0px;
+  line-height: 18px;
+  color: #1f2022;
+  font-weight: 500;
+  width: auto;
+  position: absolute;
+  top: 78px;
+  right: 0;
+  z-index: 5;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0) url("../../../img/megnor/get-in-tuch.png") no-repeat scroll left 0;
+}
+@media (max-width: 991px) {
+  .shop-phone {
+    top: 170px;
+  }
+}
+@media (max-width: 767px) {
+  .shop-phone {
+    margin: 0 auto;
+    left: 0;
+    text-align: center;
+    width: 235px;
+    top: 190px;
+  }
+}
+.shop-phone i {
+  font-size: 21px;
+  line-height: 21px;
+  padding-right: 7px;
+}
+.shop-phone strong {
+  color: #ff9c00;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+#contact-link {
+  float: right;
+  display: none;
+  border-left: 1px solid #515151;
+}
+#contact-link a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  padding: 8px 10px 11px 10px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  line-height: 18px;
+}
+@media (max-width: 480px) {
+  #contact-link a {
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+#contact-link a:hover, #contact-link a.active {
+  background: #2b2b2b;
+}
+
+@media (max-width: 767px) {
+  #contact_block {
+    margin-bottom: 20px;
+  }
+}
+#contact_block .label {
+  display: none;
+}
+#contact_block .block_content {
+  color: #888888;
+}
+#contact_block p {
+  margin-bottom: 4px;
+}
+#contact_block p.tel {
+  font: 400 17px/21px "Roboto", Helvetica, sans-serif;
+  color: #707070;
+  margin-bottom: 6px;
+}
+#contact_block p.tel i {
+  font-size: 25px;
+  vertical-align: -2px;
+  padding-right: 10px;
+}

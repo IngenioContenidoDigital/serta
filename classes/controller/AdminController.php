@@ -786,7 +786,10 @@ class AdminControllerCore extends Controller
         }
 
         $filters = $this->context->cookie->getFamily($prefix.$this->list_id.'Filter_');
-        $definition = ObjectModel::getDefinition($this->className);
+        $definition = false;
+        if (isset($this->className) && $this->className) {
+            $definition = ObjectModel::getDefinition($this->className);
+        }
 
         foreach ($filters as $key => $value) {
             /* Extracting filters from $_POST on key filter_ */
@@ -844,7 +847,6 @@ class AdminControllerCore extends Controller
                             $value = (float)str_replace(',', '.', $value);
                             $sql_filter .= ($check_key ?  $alias.'.' : '').pSQL($key).' = '.pSQL(trim($value)).' ';
                         } else {
-
                             $sql_filter .= ($check_key ?  $alias.'.' : '').pSQL($key).' LIKE \'%'.pSQL(trim($value)).'%\' ';
                         }
                     }
@@ -886,6 +888,10 @@ class AdminControllerCore extends Controller
                 // Process list filtering
                 if ($this->filter && $this->action != 'reset_filters') {
                     $this->processFilter();
+                }
+
+                if (isset($_POST) && count($_POST) && (int)Tools::getValue('submitFilter'.$this->list_id) || Tools::isSubmit('submitReset'.$this->list_id)) {
+                    $this->setRedirectAfter(self::$currentIndex.'&token='.$this->token.(Tools::isSubmit('submitFilter'.$this->list_id) ? '&submitFilter'.$this->list_id.'='.(int)Tools::getValue('submitFilter'.$this->list_id) : ''));
                 }
 
                 // If the method named after the action exists, call "before" hooks, then call action method, then call "after" hooks
@@ -1374,13 +1380,15 @@ class AdminControllerCore extends Controller
                 if (isset($values['type']) && $values['type'] == 'textLang') {
                     foreach ($languages as $language) {
                         if (Tools::getValue($field.'_'.$language['id_lang']) && isset($values['validation'])) {
-                            if (!Validate::$values['validation'](Tools::getValue($field.'_'.$language['id_lang']))) {
+                            $values_validation = $values['validation'];
+                            if (!Validate::$values_validation(Tools::getValue($field.'_'.$language['id_lang']))) {
                                 $this->errors[] = sprintf(Tools::displayError('field %s is invalid.'), $values['title']);
                             }
                         }
                     }
                 } elseif (Tools::getValue($field) && isset($values['validation'])) {
-                    if (!Validate::$values['validation'](Tools::getValue($field))) {
+                    $values_validation = $values['validation'];
+                    if (!Validate::$values_validation(Tools::getValue($field))) {
                         $this->errors[] = sprintf(Tools::displayError('field %s is invalid.'), $values['title']);
                     }
                 }
@@ -1646,10 +1654,6 @@ class AdminControllerCore extends Controller
             return $this->fields_list[$filter];
         }
         return false;
-    }
-
-    public function displayNoSmarty()
-    {
     }
 
     /**
@@ -2056,20 +2060,6 @@ class AdminControllerCore extends Controller
 
         $this->tab_modules_list = Tab::getTabModulesList($this->id);
 
-        $modules = Module::getModulesOnDisk();
-
-        $tmp = array();
-        foreach ($modules as $module) {
-            $tmp[] = $module->name;
-        }
-
-        foreach ($this->tab_modules_list['slider_list'] as $key => $module) {
-            if (!in_array($module, $tmp)) {
-                unset($this->tab_modules_list['slider_list'][$key]);
-            }
-        }
-
-
         if (is_array($this->tab_modules_list['default_list']) && count($this->tab_modules_list['default_list'])) {
             $this->filter_modules_list = $this->tab_modules_list['default_list'];
         } elseif (is_array($this->tab_modules_list['slider_list']) && count($this->tab_modules_list['slider_list'])) {
@@ -2237,6 +2227,9 @@ class AdminControllerCore extends Controller
             'addons_forgot_password_link' => '//addons.prestashop.com/'.$this->context->language->iso_code.'/forgot-your-password'
         ));
 
+        //Force override translation key
+        Context::getContext()->override_controller_name_for_translations = 'AdminModules';
+
         $this->modals[] = array(
             'modal_id' => 'modal_addons_connect',
             'modal_class' => 'modal-md',
@@ -2246,6 +2239,9 @@ class AdminControllerCore extends Controller
             .'&utm_content='.(defined('_PS_HOST_MODE_') ? 'cloud' : 'download').'">PrestaShop Addons</a>',
             'modal_content' => $this->context->smarty->fetch('controllers/modules/login_addons.tpl'),
         );
+
+        //After override translation, remove it
+        Context::getContext()->override_controller_name_for_translations = null;
     }
 
     /**
@@ -2600,8 +2596,8 @@ class AdminControllerCore extends Controller
         Media::addJsDef(array('host_mode' => (defined('_PS_HOST_MODE_') && _PS_HOST_MODE_)));
 
         $this->addJS(array(
-            _PS_JS_DIR_.'admin.js',
-            _PS_JS_DIR_.'tools.js',
+            _PS_JS_DIR_.'admin.js?v='._PS_VERSION_,
+            _PS_JS_DIR_.'tools.js?v='._PS_VERSION_,
             _PS_JS_DIR_.'jquery/plugins/timepicker/jquery-ui-timepicker-addon.js'
         ));
 
@@ -3637,7 +3633,8 @@ class AdminControllerCore extends Controller
         if (isset($field['validation'])) {
             $valid_method_exists = method_exists('Validate', $field['validation']);
             if ((!isset($field['empty']) || !$field['empty'] || (isset($field['empty']) && $field['empty'] && $value)) && $valid_method_exists) {
-                if (!Validate::$field['validation']($value)) {
+                $field_validation = $field['validation'];
+                if (!Validate::$field_validation($value)) {
                     $this->errors[] = Tools::displayError($field['title'].' : Incorrect value');
                     return false;
                 }
@@ -3872,9 +3869,9 @@ class AdminControllerCore extends Controller
             if ($result) {
                 $this->redirect_after = self::$currentIndex.'&conf=28&token='.$this->token;
             }
-            $this->errors[] = Tools::displayError('An error occurred while affecting a zone to the selection.');
+            $this->errors[] = Tools::displayError('An error occurred while assigning a zone to the selection.');
         } else {
-            $this->errors[] = Tools::displayError('You must select at least one element to affect a new zone.');
+            $this->errors[] = Tools::displayError('You must select at least one element to assign a new zone.');
         }
 
         return $result;

@@ -1,0 +1,274 @@
+body {
+  background: #f6f6f6;
+}
+
+#header {
+  background: none;
+}
+#header .header-row .shop-phone {
+  color: white;
+  text-shadow: 0 1px #404040;
+}
+#header .header-row .shop-phone i,
+#header .header-row .shop-phone strong {
+  color: #aaa;
+}
+#header .nav, #header .sf-menu, #header .sf-menu > li > ul, #header .sf-menu li ul li ul {
+  background: #cbccbe;
+  color: black;
+}
+
+#header_user #shopping_cart a {
+  background: white;
+  color: white;
+}
+#header_user #shopping_cart a:after {
+  color: white;
+}
+#header_user #shopping_cart a:hover {
+  color: white;
+  text-shadow: 0 1px #333;
+  background: #333333;
+}
+
+#home-page-tabs, .nav-tabs {
+  background: none;
+}
+#home-page-tabs > li, .nav-tabs > li {
+  border-color: #c6c7bb;
+  background: white;
+}
+#home-page-tabs > li.active a,
+#home-page-tabs > li a:hover, .nav-tabs > li.active a,
+.nav-tabs > li a:hover {
+  background: #584336 !important;
+  color: white !important;
+}
+
+.new,
+.sale,
+.new-label {
+  background: #584336;
+  color: white;
+  border: none;
+}
+.new:before, .new:after,
+.sale:before,
+.sale:after,
+.new-label:before,
+.new-label:after {
+  border-color: #584336 transparent transparent transparent;
+}
+
+ul.product_list.grid > li .product-container .product-image-container {
+  background: white;
+}
+ul.product_list.grid > li .product-container .product-image-container .product_img_link {
+  background: #f1e8e3;
+}
+ul.product_list.grid > li .product-container .product-image-container .product_img_link img {
+  background: #f1e8e3;
+}
+
+a:hover, a:focus,
+.price,
+.price.product-price,
+.content_sortPagiBar .display li.selected i,
+.content_sortPagiBar .display_m li.selected i,
+.content_sortPagiBar .display li a:hover i,
+.content_sortPagiBar .display_m li a:hover i,
+.top-pagination-content ul.pagination li.active > span,
+.bottom-pagination-content ul.pagination li.active > span,
+.our_price_display,
+.pagination > li > a:hover,
+.customNavigation a,
+#tmproduct_tab_block .col-xs-12 #productpage_tab li a:active, #tmproduct_tab_block .col-xs-12 #productpage_tab li a:hover, #tmproduct_tab_block .col-xs-12 #productpage_tab .active a,
+.footer-container #footer h4,
+.footer-container #footer a:hover,
+#view_scroll_left:hover:before, #view_scroll_right:hover:before,
+#view_scroll_left:hover:before, #view_scroll_right:hover:before,
+.pb-left-column #image-block #view_full_size .span_link:hover:after,
+#layer_cart .cross:hover {
+  color: #584336 !important;
+}
+
+.old-price {
+  color: #b1b0b0;
+}
+
+.button.lnk_view:hover span {
+  color: white;
+  background: #584336;
+  border-color: #584336;
+}
+
+#cmsinfo_block em {
+  background: #584336;
+  text-shadow: 0 1px #4e3c30;
+}
+
+.footer-container {
+  background: #cbccbe;
+  border-top: 1px solid #eee;
+}
+@media (min-width: 768px) {
+  .footer-container #footer .row {
+    background: none;
+  }
+}
+
+.footer-container #footer, #block_top_menu .top_menu_inner {
+  background: none !important;
+}
+
+.footer-container #footer a:hover {
+  color: #584336;
+}
+
+.footer-container #footer #block_contact_infos > div ul li {
+  color: white;
+}
+
+/*============ Extra Added By Megnor =====*/
+.sf-menu > li.sfHover > a, .sf-menu > li > a:hover, .sf-menu > li.sfHoverForce > a {
+  color: #000;
+}
+
+#cmsinfo_block,
+#cmsinfo_block > div + div {
+  border-color: #c6c7bb;
+}
+
+#subcategories ul li:hover .subcategory-image a {
+  border-color: #584336;
+}
+
+/*=================== Button Setting ==================*/
+.button.ajax_add_to_cart_button, .button.lnk_view, .button.button-small, .button.button-medium, .button.exclusive-medium,
+.cart_navigation .standard-checkout, #button_order_cart, #layer_cart .button-container .button-medium,
+.button.ajax_add_to_cart_button, .button.lnk_view, .button.button-small, .button.button-medium, .button.exclusive-medium {
+  color: white !important;
+  border-color: #584336 !important;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.button.ajax_add_to_cart_button span, .button.lnk_view span, .button.button-small span, .button.button-medium span, .button.exclusive-medium span,
+.cart_navigation .standard-checkout span, #button_order_cart span, #layer_cart .button-container .button-medium span,
+.button.ajax_add_to_cart_button span, .button.lnk_view span, .button.button-small span, .button.button-medium span, .button.exclusive-medium span {
+  padding: 8px 10px;
+  display: block;
+  background: #584336 !important;
+}
+.button.ajax_add_to_cart_button:hover, .button.lnk_view:hover, .button.button-small:hover, .button.button-medium:hover, .button.exclusive-medium:hover,
+.cart_navigation .standard-checkout:hover, #button_order_cart:hover, #layer_cart .button-container .button-medium:hover,
+.button.ajax_add_to_cart_button:hover, .button.lnk_view:hover, .button.button-small:hover, .button.button-medium:hover, .button.exclusive-medium:hover {
+  border-color: #cbccbe !important;
+}
+.button.ajax_add_to_cart_button:hover span, .button.lnk_view:hover span, .button.button-small:hover span, .button.button-medium:hover span, .button.exclusive-medium:hover span,
+.cart_navigation .standard-checkout:hover span, #button_order_cart:hover span, #layer_cart .button-container .button-medium:hover span,
+.button.ajax_add_to_cart_button:hover span, .button.lnk_view:hover span, .button.button-small:hover span, .button.button-medium:hover span, .button.exclusive-medium:hover span {
+  filter: none;
+  background: #cbccbe !important;
+}
+
+.box-info-product .exclusive {
+  border-color: #584336;
+  background: #584336;
+}
+.box-info-product .exclusive:before {
+  border-color: #584336;
+  border: none;
+}
+.box-info-product .exclusive span {
+  border-color: #584336;
+  border: none;
+}
+.box-info-product .exclusive:hover {
+  background: #cbccbe;
+}
+
+.cart_navigation .button-exclusive {
+  border-color: #584336 !important;
+  background: #584336;
+}
+
+.cart_navigation .button-exclusive:hover, .cart_navigation .button-exclusive:focus, .cart_navigation .button-exclusive:active {
+  border-color: #cbccbe !important;
+  background: #cbccbe;
+}
+
+ul.step li.step_current {
+  background: #584336;
+}
+
+.accessories-block .exclusive span {
+  background: none !important;
+}
+
+#home-page-tabs > li.active a div, #home-page-tabs > li a:hover div, .nav-tabs > li.active a div, .nav-tabs > li:hover a div {
+  border-top-color: #584336;
+}
+
+.customNavigation a.next i:hover:before, .customNavigation a.prev i:hover:before {
+  color: #584336 !important;
+}
+
+.tm-tabcontent #productpage_tab li, .nav > li > a {
+  background: #f6f6f6;
+}
+
+.footer_bottom {
+  background: #584336;
+}
+
+.sf-menu li li li a:hover, .sf-menu > li {
+  background: none !important;
+}
+
+#search_block_top .search_main {
+  background: white !important;
+  box-shadow: none !important;
+}
+
+#search_block_top .search_main .btn.button-search, #search_block_top .search_main .btn.button-search:hover {
+  color: #584336;
+}
+
+ul.product_list.grid li .product-container, ul.tm-carousel li .product-container, .content_sortPagiBar {
+  background: #f6f6f6;
+}
+
+#left_column .block .title_block a, #left_column .block h4 a, #right_column .block .title_block a, #right_column .block h4 a, #left_column .block .title_block, #left_column .block h4, #right_column .block .title_block, #right_column .block h4 {
+  background-color: #584336;
+  color: white;
+}
+
+#currencies-block-top div.current,
+#languages-block-top div.current,
+#contact-link a,
+.shop-phone,
+.header_user_info ul li a,
+#languages-block-top ul li.selected, #languages-block-top ul li:hover a,
+.sf-menu > li > a,
+.sf-menu > li > ul > li > a,
+.footer-container #footer a,
+.footer-container #footer #block_contact_infos > div ul li,
+.sf-menu li ul li ul a {
+  color: black !important;
+  text-shadow: 0 0 0 transparent;
+}
+
+#languages-block-top div.current:hover, #languages-block-top div.current.active,
+#languages-block-top ul li.selected, #languages-block-top ul li:hover a,
+#currencies-block-top div.current:hover, #currencies-block-top div.current.active,
+#currencies-block-top ul li.selected, #currencies-block-top ul li:hover a,
+#contact-link a:hover, #contact-link a.active,
+.header_user_info ul li a:hover, .header_user_info ul li a.active,
+#search_block_top .btn.button-search,
+.sf-menu > li.sfHover > a, .sf-menu > li > a:hover, .sf-menu > li.sfHoverForce > a {
+  color: white !important;
+  background: #584336 !important;
+}

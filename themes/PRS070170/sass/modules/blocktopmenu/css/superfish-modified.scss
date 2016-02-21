@@ -1,0 +1,245 @@
+@import "compass";
+@import "theme_variables";
+/*** ESSENTIAL STYLES ***/
+.sf-contener {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+.sf-right {}
+.sf-menu,
+.sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu {
+	position: relative;
+	padding: 0;
+	width: 100%;
+	@media (max-width: $screen-sm-max) { // max 767px
+		display: none;
+		position: absolute;
+		top: 68px;
+		background: #fff;
+		z-index: 99;
+		padding: 5px;
+		border: 1px solid $common-border-color;
+	}
+	@media (max-width: $screen-xs) {top: 58px;}
+}
+.sf-menu ul {
+	position: absolute;
+	top: -999em;
+	background: $light-background;
+	@media (max-width: $screen-sm-max) { // max 767px
+		position: relative;
+	}
+}
+.sf-menu ul li {
+	width: 100%;
+}
+.sf-menu li:hover {
+	visibility: inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu > li {
+	float: left;
+	border-right: 1px solid $base-border-color;
+	@media (max-width: $screen-sm-max) { // max 767px
+		float: none;
+		position: relative;
+		border: none;
+		span.menu-mobile-grover {
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			width: 25px;
+			height: 25px;
+			z-index: 2;
+			&:after {
+				font-family: $font-icon;
+				content: "\f067";
+				font-size: 10px;
+				color:#707070;
+				position: relative;
+				top: 3px;
+				padding: 10px; 
+				cursor:pointer;
+			}
+			&.active {
+				&:after {
+					content: "\f068";	
+				}
+			}
+		}
+	}
+	> a {
+		font: 400 13px/22px $font-family;
+		color: #707070;
+		display: block;
+		padding: 6px 10px;
+		text-transform: uppercase;
+	}
+	&.sfHover > a,
+	> a:hover,
+	&.sfHoverForce > a {
+		color: #1f2022;
+	}
+}
+.sf-menu > li:last-child	{ border:none;}
+.sf-menu li li li a {
+	display: inline-block;
+	position: relative;
+	color: #707070;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: normal;
+	padding-bottom: 10px;
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+.sf-menu li ul {
+	display: none;
+	left: 0;
+	top: 46px; /* match top ul list item height */
+	z-index: 99;
+	padding: 12px 0px 18px 0px;
+	@media (max-width: $screen-sm-max) { // max 767px
+		top: 0;
+		visibility: visible !important;
+	}
+}
+.sf-menu li li ul {
+	position: static;
+	display: block !important;
+	opacity: 1 !important;
+	background: none;
+	padding:10px 20px 0;
+	@include box-shadow(rgba(black, 0) 0px 0px 0px);
+}
+.sf-menu li li li ul {
+	padding: 0 0 0 20px;
+}
+.sf-menu li li li ul {
+	width: 220px;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top: -999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left: 200px; /* match ul width */
+	top: 0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top: -999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left: 200px; /* match ul width */
+	top: 0;
+}
+.sf-menu > li > ul {
+	padding: 0 25px;
+	width: 100%;
+	> li {
+		> a {
+			text-transform: uppercase;
+			font: 400 13px/20px $font-family;
+			color: #707070;
+			&:hover {
+				color: $base-body-color;
+			}
+		}
+	}
+}
+.sf-menu > li > ul > li {
+	float: left;
+	width: 20%;
+	padding-right: 15px;
+	@media (max-width: $screen-sm-max) { // max 767px
+		width: 100%;
+		padding:5px 0 0;
+	}
+	@media (max-width: $screen-xs) { // max 479px
+		width: 100%;
+	}
+	@media (min-width: $screen-sm) { // min 768px
+		&.first-in-line-lg {
+			clear: left;
+		}
+	}
+	@media (min-width: $screen-xs) and (max-width: $screen-xs-max) { // min 480px max 767px
+		&.first-in-line-xs {
+			clear: left;
+		}
+	}
+}
+.sf-menu > li > ul > li.category-thumbnail {
+	width: 100% !important;
+	float: none;
+	clear: both;
+	overflow: hidden;
+	padding-right: 0;
+	> div {
+		float: left;
+		padding-left: 10px;
+		width: 33.333%;
+		@media (max-width: $screen-xs) { // max 479px
+			width: 100%;
+			padding-left: 0;
+			padding-top: 10px;
+			text-align: center;
+		}
+		&:first-child {
+			padding-left: 0;
+		}
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+}
+.cat-title {
+	display: none;
+	@media (max-width: $screen-sm-max) { // max 767px
+		display: block;
+		cursor:pointer;
+		font: 400 14px/21px $font-family;
+		text-transform: uppercase;
+		color: #fff;
+		display: block;
+		padding: 14px 20px;
+		background: #25aef5;
+		position: relative;
+		&:after {
+			display: block;
+			font-family: $font-icon;
+			content: "\f0c9";
+			position: absolute;
+			right: 20px;
+			top: 14px;
+			font-size: 24px;
+		}		
+	}
+}
+
+.sf-menu {
+	li.sf-search{
+		border: none;
+		input{
+			display: inline;
+			padding: 0 13px;
+			height: 30px;
+			line-height: 30px;
+			background: $input-bg;
+			margin: 13px 10px 0 0;
+			font-size: 13px;
+			color: $input-color;
+			border: 1px solid $input-border;
+		}
+	}
+}

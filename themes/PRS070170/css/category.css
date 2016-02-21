@@ -1,0 +1,262 @@
+/* ************************************************************************************************
+								Categories Page Styles
+************************************************************************************************ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.content_scene_cat {
+  padding: 0px;
+  line-height: 19px;
+  margin: -83px 0 20px 0;
+}
+.content_scene_cat .align_center {
+  margin: 0 0 8px 0;
+}
+.content_scene_cat .align_center img {
+  max-width: 100%;
+  height: auto;
+}
+.content_scene_cat .cat_desc {
+  margin: 20px 0 0;
+}
+.content_scene_cat span.category-name {
+  font: 600 42px/51px "Open Sans", sans-serif;
+  color: white;
+  margin-bottom: 12px;
+  display: none;
+}
+@media (max-width: 1199px) {
+  .content_scene_cat span.category-name {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+.content_scene_cat p {
+  margin-bottom: 0;
+}
+.content_scene_cat a {
+  color: white;
+}
+.content_scene_cat a:hover {
+  text-decoration: underline;
+}
+.content_scene_cat .content_scene {
+  color: #1f2022;
+}
+.content_scene_cat .content_scene .cat_desc {
+  padding-top: 20px;
+}
+.content_scene_cat .content_scene .cat_desc a {
+  color: #1f2022;
+}
+.content_scene_cat .content_scene .cat_desc a:hover {
+  color: #1f2022;
+}
+
+/* ************************************************************************************************
+									Sub Categories Styles
+************************************************************************************************ */
+#subcategories {
+  border-top: 1px solid #e5e5e5;
+  padding: 15px 0 0px 0;
+  color: #1f2022;
+  font: 500 14px/20px "Roboto", Helvetica, sans-serif;
+}
+#subcategories ul {
+  margin: 0 0 15px 0px;
+  width: 100%;
+  text-align: center;
+}
+#subcategories ul li {
+  float: left;
+  width: 18%;
+  margin: 5px 8px;
+  text-align: center;
+}
+@media (min-width: 319px) and (max-width: 767px) {
+  #subcategories ul li {
+    width: 50%;
+    float: none;
+    margin: 5px auto;
+  }
+}
+@media (max-width: 319px) {
+  #subcategories ul li {
+    width: 50%;
+    float: none;
+    margin: 5px auto;
+  }
+}
+#subcategories ul li .subcategory-image {
+  padding: 0;
+}
+#subcategories ul li .subcategory-image a {
+  display: block;
+  background-color: #fff;
+  padding: 6px;
+  border: 1px solid #e5e5e5;
+}
+#subcategories ul li .subcategory-image a img {
+  max-width: 100%;
+  vertical-align: top;
+  height: auto;
+}
+#subcategories ul li .subcategory-name {
+  color: #1f2022;
+  font-weight: normal;
+}
+#subcategories ul li .subcategory-name:hover {
+  color: #1f2022;
+}
+#subcategories ul li .cat_desc {
+  display: none;
+}
+#subcategories ul li:hover a {
+  color: #1f2022;
+}
+#subcategories ul li:hover .subcategory-image a {
+  border: 2px solid #e8e8e8;
+  padding: 5px;
+}
+
+/* ---- Catergory Tabs-----*/
+
+.titulo-prod{
+    font-family: 'Open Sans' !important;
+    color: #002b5a;
+    font-size:35px;
+}
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px;
+	/*border-bottom: 1px solid #333;*/
+	width: 100%;
+        
+        
+}
+
+ul.tabs li:first-child{
+    margin-left:0px;
+    border-top-left-radius: 5px;
+}
+
+ul.tabs li:last-child{
+    border-top-right-radius: 5px;
+}
+
+ul.tabs li {
+	float: left;
+	margin: 0;
+	cursor: pointer;
+	padding: 0px 21px;
+	height: 31px;
+	line-height: 31px;
+        font-family: 'Open Sans';
+	background: rgba(243,243,243,0.6);
+	color: #002b5a;
+	overflow: hidden;
+	position: relative;
+        font-size:14px;
+        margin-left:3px;
+        margin-right:3px;        
+}
+
+.tab_last { border-right: 1px solid #333; }
+
+ul.tabs li:hover {
+	background-image: url('../../../img/tan.jpg');
+        cursor:pointer;
+}
+
+ul.tabs li.active {
+	background-image: url('../../../img/tan.jpg');
+	border-bottom: 1px solid #fff;
+	display: block;
+}
+
+.tab_container {
+	/*border: 1px solid #333;*/
+	border-top: none;
+	clear: both;
+	float: left;
+	width: 100%;
+	background-image: url('../../../img/tan.jpg');
+	overflow: auto;
+        margin-bottom: 15px;
+}
+
+.tab_content {
+        font-family: 'Open Sans';
+	padding: 20px;
+	display: none;
+}
+
+.tab_content h2{
+    color: #002b5a;
+    font-size:22px;
+    font-weight: lighter;
+}
+
+
+.tab_drawer_heading { display: none; }
+
+@media screen and (max-width: 480px) {
+	.tabs {
+		display: none;
+	}
+	.tab_drawer_heading {
+		background-color: #ccc;
+		color: #fff;
+		border-top: 1px solid #333;
+		margin: 0;
+		padding: 5px 20px;
+		display: block;
+		cursor: pointer;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.d_active {
+		background-color: #666;
+		color: #fff;
+	}
+}
+/* ---- Fin Catergory Tabs-----*/
+
+.iconos li a{
+    position:relative;
+    line-height: 56px;
+    vertical-align: top;
+    font-family: 'Open Sans';
+    color: #002b5a;
+    font-size: 16px;
+}
+
+.iconos li a img:hover{
+    transform: scale(1.2);
+}
+
+.iconos li a img{
+    margin-right: 10px;
+}
+
+
+.inactive{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+#lista-productos{
+    background-image: url('../../../img/tan.jpg');
+    padding: 20px;
+    margin-top: 32px;
+}

@@ -1,0 +1,76 @@
+@import "compass";
+@import "theme_variables";
+#currencies-block-top {
+	float: right;
+	position: relative;
+	clear: right;													
+	span.firstWord {
+		display: none;
+	}
+	div.current {
+		padding: 0;
+		color: $base-text-color;
+		cursor: pointer;
+		line-height:20px;
+		font-weight: 400;
+		&:hover, &.active {
+			color:$link-hover-color;
+		}
+		&:after {
+			content: "\f107";
+			font-family: $font-icon;
+			font-size: 12px;
+			line-height: 20px;
+			padding-left: 12px;
+			@media (max-width: $screen-xs){padding-left: 3px;}
+		}
+		.cur-label {
+			@media (max-width: $screen-xs-max) { // max 767px
+				display: none;
+			}
+		}
+		strong{font-weight: 400 !important;}
+	}
+	.active  {
+		&:after {
+			content: "\f106" !important;
+			font-family: $font-icon;
+		}
+	}
+	ul {
+		display: none;
+		position: absolute;
+		top: 28px;
+		right: 0px;
+		width: 157px;
+		border: 1px solid $common-border-color;
+		border-top: none;
+		padding: 5px 0;
+		background: $light-background;
+		z-index: 9;
+		text-align:left;
+		transition: none;
+
+		@media (max-width: $screen-xs) { // max 479px
+			width:130px;
+		}
+		li {
+			color: $light-text-color;
+			line-height: 30px;
+			a,
+			> span {
+				padding: 0 10px 0 12px;
+				display: block;
+				color: #707070;
+				font-size: 12px;
+			}
+			&.selected a, &:hover a,&:hover > span {
+				color:$base-body-color;
+			}
+		}
+	}
+}
+
+.cur-label{
+	display:none;
+}

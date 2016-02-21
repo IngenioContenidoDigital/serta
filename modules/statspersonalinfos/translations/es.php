@@ -10,7 +10,7 @@ $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_3ca26e413e485538a7f
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_74036f0101d2f3f9b082b8de981c18dc'] = 'Para que cada mensaje tenga un impacto, necesita saber a quien va dirigido.';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_daa0ad6a8b07a64f18b26e0f5e1255bd'] = 'Dirigirse al público adecuado es primordial para elegir las herramientas correctas para convencer a cada uno de los públicos perseguidos';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_8044a3d0d61282c4c425cd0da5432f11'] = 'Es preferible limitar la acción a un grupo o grupos de clientes.';
-$_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_05f074d112460c990203ff2f17a7d46d'] = 'La información de clientes registrados le permite definir con mas exactitud el perfil de cliente típico de modo que usted pueda adaptar sus ofertas a los diferentes criterios.';
+$_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_05f074d112460c990203ff2f17a7d46d'] = 'La información de clientes registrados le permite definir con más exactitud el perfil de cliente, de modo que usted pueda adaptar sus ofertas y promociones especiales.';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_9dc739320e2523183e8b31f395e1e489'] = 'Puedes incrementar tus ventas:';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_2f619981f1abd95da0907766cc409be9'] = 'Lanzando campañas publicitarias dirigidas a clientes específicos.';
 $_MODULE['<{statspersonalinfos}prestashop>statspersonalinfos_428dc481e13dad2818d8088da7362dd2'] = 'Ponerse en contacto con un grupo de clientes por email o a través de la newsletter.';

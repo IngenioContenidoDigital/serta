@@ -3,7 +3,7 @@
 	<name>statsdata</name>
 	<displayName><![CDATA[Explotaci&oacute;n de datos para las estad&iacute;sticas]]></displayName>
 	<version><![CDATA[1.5.0]]></version>
-	<description><![CDATA[Este m&oacute;dulo debe estar activado si usted quiere utilizar las estad&iacute;sticas]]></description>
+	<description><![CDATA[Este m&oacute;dulo debe estar activado si quiere utilizar las estad&iacute;sticas.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[analytics_stats]]></tab>
 	<is_configurable>1</is_configurable>

@@ -1,0 +1,11 @@
+#best-sellers_block_right{
+	position: relative;
+	margin-bottom: 40px;
+	
+}
+#topsellerproduct-carousel{
+		margin: 0 ;	
+}
+@media (max-width: 991px) {
+	#best-sellers_block_right{margin-bottom: 5px !important;}
+}

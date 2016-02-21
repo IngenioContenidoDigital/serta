@@ -1,0 +1,80 @@
+@import "compass";
+@import "theme_variables";
+#languages-block-top {
+	float: right;
+	position: relative;												
+	span.firstWord {
+		display: none;
+	}
+	div.current {
+		padding: 0;
+		color: $base-text-color;
+		cursor: pointer;
+		font-weight: 400;
+		line-height:20px;
+		&:hover, &.active {
+			color:$link-hover-color;
+		}
+		&:after {
+			content: "\f107";
+			font-family: $font-icon;
+			font-size: 12px;
+			line-height: 20px;
+			padding-left: 12px;
+			@media (max-width: $screen-xs){padding-left: 3px;}
+		}
+		&:before {
+			border-right: 1px solid #aaa;
+			content: "";
+			display: block;
+			float: right;
+			height: 14px;
+			margin: 3px 10px;
+			width: 1px;	
+		}
+		.cur-label {
+			// max 479px
+			@media (max-width: $screen-xs - 1) {
+				display: none;
+			}
+		}
+	}
+	.active {
+		&:after {
+			content: "\f106" !important;
+			font-family: $font-icon;
+		}
+	}
+	ul {
+		display: none;
+		position: absolute;
+		top: 28px;
+		right: 10px;
+		width: 157px;
+		background: $light-background;
+		z-index: 9;
+		border: 1px solid $common-border-color;
+		border-top: none;
+		padding: 5px 0;
+		text-align:left;
+		transition: none;
+
+		@media (max-width: $screen-xs) { // max 479px
+			width:130px;
+		}
+		li {
+			color: $light-text-color;
+			line-height: 30px;
+			a,
+			> span {
+				padding: 0 10px 0 12px;
+				display: block;
+				color: #707070;
+				font-size: 12px;
+			}
+			&.selected span, &:hover a,&.hover span {
+				color:$base-body-color;
+			}
+		}
+	}
+}

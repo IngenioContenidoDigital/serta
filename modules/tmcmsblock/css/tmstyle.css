@@ -1,0 +1,9 @@
+#tmcmsinfo_block		
+{
+	float:left;
+	clear:both;
+	width:100%;
+}
+#tmcmsinfo_block .col-xs-12{
+	padding:0;
+}

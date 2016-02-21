@@ -7,7 +7,7 @@ $_MODULE['<{statsproduct}prestashop>statsproduct_78e454064a7d3a7755a011a3b79f31a
 $_MODULE['<{statsproduct}prestashop>statsproduct_15944ce3356cfd0513cbc76e7df9d233'] = 'Añade estadísticas detalladas para cada producto al panel de control de estadísticas.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_6602bbeb2956c035fb4cb5e844a4861b'] = 'Guía';
 $_MODULE['<{statsproduct}prestashop>statsproduct_f083d0403991f2b0ae72ea8782518f36'] = 'Número de compras en relación con el número de visitas';
-$_MODULE['<{statsproduct}prestashop>statsproduct_6e13e61b8535a66feb27d285f5c42855'] = 'Tras elegir una categoría y seleccionar un producto disponible de la categoría, aparecen algunos gráficos. Entonces, usted puede analizarlos.';
+$_MODULE['<{statsproduct}prestashop>statsproduct_6e13e61b8535a66feb27d285f5c42855'] = 'Tras elegir una categoría y seleccionar un producto, se mostrarán los gráficos informativos.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_6734b1d16e064d64d9ea4affaed74cc7'] = 'Si observas que un producto tiene éxito, que se compra mucho pero se consulta poco, deberías hacerlo resaltar más en el escaparate de tu tienda.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_f3a492ed300e8565dcdbbc1da340d226'] = 'Por otro lado, si un producto tiene muchas visitas pero no suelen comprarlo, te aconsejamos revisar o modificar la información de dicho producto, su descripción o la foto, de nuevo, quizá puedas encontrar algo mejor.';
 $_MODULE['<{statsproduct}prestashop>statsproduct_3ec365dd533ddb7ef3d1c111186ce872'] = 'Detalles';

@@ -1,0 +1,22 @@
+#block_top_menu {
+    position: absolute;
+    z-index: 300;
+    width: 45%;
+    margin-top: 10px;
+    margin-left: 220px;
+    height: 30px;
+    padding-left: 80px;
+}
+
+#block_top_menu ul li a{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+#block_top_menu ul li a:first-child:after{
+    margin-left: 5px;
+    content: url('../../../../../../img/account.png') !important;
+    display: inline-block;
+    vertical-align: -2px;
+}

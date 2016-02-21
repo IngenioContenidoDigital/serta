@@ -1,0 +1,199 @@
+@import "compass";
+@import "theme_variables";
+
+
+/* Browser Resets
+*********************************/
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+	margin-bottom: 20px;
+	position: relative; 
+	overflow: hidden;
+	.slides{
+		 zoom: 1;
+		 margin:0;
+		li {
+			display: none;
+			-webkit-backface-visibility: hidden;
+		
+			a{
+				display: block;
+				height: 492px;
+				position: relative;
+				@media (max-width: $screen-sm-max) {height: auto;}
+				img {
+					max-width: 100%;
+					margin: 0 auto;
+					position: absolute;
+					left: 0;
+					right: 0;
+					@media (max-width: $screen-sm-max) {position: static;}
+				}
+			}
+			&:after{
+				content: "\0020";
+				display: block; 
+				clear: both;
+				visibility: hidden; 
+				line-height: 0; 
+				height: 0;
+			}
+		}
+	}
+	.flex-direction-nav {
+		margin:0;
+		@media (max-width: $screen-xs-max) {display: none;}
+		a  { 
+			text-decoration:none; 
+			display: block; 
+			margin: 0; 
+			position: absolute; 
+			top: 50%; 
+			z-index: 10; 
+			overflow: hidden; 
+			opacity: 0; 
+			cursor: pointer; 
+			color: #e5e5e5;  
+			-webkit-transition: all .3s ease; 
+			-moz-transition: all .3s ease; 
+			transition: all .3s ease;  
+			font-size: 0;
+			&:before {
+				font-family: $font-icon;
+				font-size: 20px;
+				color: #1f2022;
+			}
+			&:hover {
+				&:before {
+					color: #25aef5;
+				}
+			}
+		}
+		.flex-prev { 
+			left: -50px;
+			&::before{content:"\f053";} 
+		}
+		.flex-next { 
+			right: -50px;
+			&:before{content:"\f054";} 
+		 }
+		.flex-disabled { 
+			opacity: 0!important; 
+			filter:alpha(opacity=0); 
+			cursor: default;
+		}
+	}
+	&:hover{
+		.flex-prev { opacity: 0.7; left: 10px; }
+		.flex-next { opacity: 0.7; right: 10px;}
+	}
+}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Default Theme
+*********************************/
+.flex-viewport {
+	max-height: 2000px; 
+	-webkit-transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	-o-transition: all 1s ease; 
+	transition: all 1s ease;
+}
+.loading .flex-viewport { max-height: 300px; }
+.carousel li { margin-right: 5px; }
+
+/* Direction Nav */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+
+/* Pause/Play */
+.flex-pauseplay 
+{
+	a { 
+		display: block; 
+		width: 20px; 
+		height: 20px; 
+		position: absolute; 
+		bottom: 5px;
+		left: 10px; 
+		opacity: 0.8; 
+		z-index: 10; 
+		overflow: hidden;
+		cursor: pointer;
+		color: #000; 
+		.flex-play:before { content: '\f003'; }
+	}
+}
+/* Control Nav */
+.flex-control-nav {
+	width: 100%;
+	position: absolute; 
+	margin:0; 
+	bottom: 10px;
+	text-align: center; 
+	z-index:2;
+	li {
+		margin: 0 3px; 
+		display: inline-block; 
+		a {
+			width: 11px; 
+			height: 11px; 
+			display: block; 
+			background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0; 
+			cursor: pointer; 
+			text-indent: -9999px; 
+			-webkit-border-radius: 20px; 
+			-moz-border-radius: 20px; 
+			-o-border-radius: 20px; 
+			border-radius: 20px;
+			box-shadow: 0 0 3px rgba(31, 32, 34, 0.5);
+			-webkitbox-shadow: 0 0 3px rgba(31, 32, 34, 0.5);
+			-mozbox-shadow: 0 0 3px rgba(31, 32, 34, 0.5);
+			-obox-shadow: 0 0 3px rgba(31, 32, 34, 0.5);
+			&:hover{
+				background: #fff;
+			}
+		}
+		a.flex-active{
+			background: #fff; 
+			cursor: default;
+		}
+	 }
+ }
+
+.flex-control-thumbs {
+	margin: 5px 0 0;
+	position: static;
+	overflow: hidden;
+	li {
+		width: 25%;
+		float: left;
+		margin: 0;
+	}
+	img {
+		width: 100%; 
+		display: block; 
+		opacity: .7; 
+		cursor: pointer;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
+.spinner{
+	background: #ffffff url("../../../../img/megnor/ajax-loader.gif") no-repeat scroll center center;
+	min-height: 494px;
+	width: 100%;	
+}
