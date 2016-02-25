@@ -12,10 +12,19 @@ ul.product_list h5 {
   margin: 0;
 }
 ul.product_list .product-name {
-  display: inline-block;
+  /*display: inline-block;
   width: 100%;
   overflow: hidden;
-  text-transform: capitalize;
+  text-transform: capitalize;*/
+  float:left;
+  color: #002b5a;
+  display: block;
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  margin-left: 5px;
+  text-align: left;
+  width:100%;
 }
 ul.product_list .tm_avaibility {
   display: none !important;
@@ -79,6 +88,13 @@ ul.product_list .product-image-container .quick-view {
   text-align: center;
   top: 42%;
   width: 50%;
+}
+
+.estilo-precio{
+    width:100%;
+    text-align: left;
+    padding-top: 5px;
+    padding-left:5px;
 }
 @media (min-width: 1200px) {
   ul.product_list .product-image-container .quick-view {

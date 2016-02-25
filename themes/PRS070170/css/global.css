@@ -7949,7 +7949,10 @@ h5.product-name {
 }
 
 .price.product-price {
-  color: #1f2022;
+    font-family: 'Open Sans', sans-serif;
+    color: #4987ca;
+    font-size: 16px;
+    text-align: left;
 }
 
 .old-price, #old_price {
@@ -10992,6 +10995,8 @@ option {
 .tm-carousel .content_price {
   margin: 0 0 5px 0;
 }
+
+
 
 .availability .available-now,
 #availability_value, #last_quantities,
