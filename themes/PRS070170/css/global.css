@@ -8848,6 +8848,11 @@ div.star a:hover {
 
 #page .rte {
   background: transparent none repeat scroll 0 0;
+  /*margin-top:-140px;*/
+}
+
+.fondo-cms{
+    margin-top:-140px;
 }
 
 .listcomment {
@@ -12000,7 +12005,7 @@ div.uploader span.filename, .form-control.grey {
 }
 @media (max-width: 1199px) {
   #search_block_top .btn.button-search {
-    right: 53px;
+    right: 19px;
   }
 }
 @media (max-width: 480px) {
@@ -12035,9 +12040,9 @@ div.uploader span.filename, .form-control.grey {
     color: #gray;
     /* background-color: #52555b; */
 }
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   #search_block_top #search_query_top {
-    width: 62%;
+    width: 33%;
   }
 }
 @media (max-width: 991px) {

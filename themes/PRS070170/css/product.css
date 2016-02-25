@@ -1,6 +1,7 @@
 /* product desc */
 /* primary_block ***************************************************************************** */
 .primary_block {
+  margin-top:250px;
   margin-bottom: 40px;
   background-image: url('/img/tan.jpg');
   padding:20px;
@@ -125,9 +126,9 @@ a.fancybox-nav {
   margin: 0 14px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  #thumbs_list {
-    width: 69%;
-  }
+    #thumbs_list {
+        width: 69%;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   #thumbs_list {
@@ -1267,7 +1268,7 @@ Quick View Styles
 .tm-tabcontent .tab-content {
   border: 1px solid #e5e5e5;
   border-top: none;
-  background: #fff;
+  /*background: #fff;*/
   margin: 0;
   padding: 25px;
 }

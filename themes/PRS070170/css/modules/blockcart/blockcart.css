@@ -2,9 +2,7 @@
 					Cart Block Styles
 ********************************************************************/
 #header .shopping_cart {
-    position: absolute;
     top: -100px;
-    right: 310px;
     z-index: 5;
 }
 
@@ -49,6 +47,17 @@
   display: none;
 }
 
+@media (min-width: 1200px) {
+    #header .shopping_cart {
+        position: absolute;
+        right: 310px;
+    }    
+}
+#header .shopping_cart a {
+  text-align: center;
+  width: 57px;
+}
+
 @media (max-width: 767px) {
   #header .shopping_cart {
     padding-top: 0px;
@@ -74,11 +83,15 @@
     padding-top: 20px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .shopping_cart {
+    position: absolute;
+    right: 257px;
     margin: 0 auto;
     float: none;
-    width: 100%;
+  }
+  .shopping_cart > a:first-child {
+    /*min-width: 117px;*/
   }
 }
 .shopping_cart > a:first-child {
@@ -92,11 +105,7 @@
   width: 150px;
   z-index: 3000;
 }
-@media (max-width: 1199px) {
-  .shopping_cart > a:first-child {
-    min-width: 117px;
-  }
-}
+
 @media (max-width: 991px) {
   .shopping_cart > a:first-child {
     padding: 13px 16px 17px 42px;

@@ -82,8 +82,10 @@
                     menu.addClass("tm_sc-menu");
                     logo.removeClass("img-responsive");
                     logo.addClass("img-responsive80");
-                    cart.removeClass("shopping_cart");
-                    cart.addClass("shopping_cart-s");
+                    if($(window).width()>992){
+                        cart.removeClass("shopping_cart");
+                        cart.addClass("shopping_cart-s");
+                    }
                 }else{
                     var menu = $('.tm_sc-menu');
                     var logo = $('.logo');
