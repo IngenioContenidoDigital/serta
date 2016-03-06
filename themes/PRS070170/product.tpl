@@ -36,6 +36,7 @@
 	{/if}
 	<div itemscope itemtype="https://schema.org/Product">
 	<meta itemprop="url" content="{$link->getProductLink($product)}">
+        <div class="banner-product"></div>
 	<div class="primary_block row">
 		{if isset($adminActionDisplay) && $adminActionDisplay}
 			<div id="admin-action" class="container">
@@ -199,6 +200,7 @@
 					<input type="hidden" name="token" value="{$static_token}" />
 					<input type="hidden" name="id_product" value="{$product->id|intval}" id="product_page_product_id" />
 					<input type="hidden" name="add" value="1" />
+                                        <input type="hidden" id="product_cat" name="product_cat" value="{$product->category}" />
 					<input type="hidden" name="id_product_attribute" id="idCombination" value="" />
 				</p>
 				<div class="box-info-product">

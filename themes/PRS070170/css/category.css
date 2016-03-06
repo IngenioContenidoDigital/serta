@@ -6,8 +6,21 @@
 .content_scene_cat {
   padding: 0px;
   line-height: 19px;
-  margin: -83px 0 20px 0;
 }
+
+@media (max-width: 991px){
+    .content_scene_cat {
+        padding: 0px;
+        line-height: 19px;
+        margin: -19px 0 20px 0;
+    }
+}
+@media (min-width: 992px){
+    .content_scene_cat {
+        margin: -83px 0 20px 0;
+    }
+}
+
 .content_scene_cat .align_center {
   margin: 0 0 8px 0;
 }

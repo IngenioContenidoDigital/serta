@@ -24,7 +24,7 @@
 *}
 {if isset($orderby) AND isset($orderway)}
 <ul class="display hidden-xs">
-	<li class="display-title">{l s='View:'}</li>
+    <li class="display-title">{l s='View:'}</li>
     <li id="grid"><a rel="nofollow" href="#" title="{l s='Grid'}"></a></li>
     <li id="list"><a rel="nofollow" href="#" title="{l s='List'}"></a></li>
 </ul>

@@ -211,6 +211,31 @@ $(document).ready(function()
 		if (url.indexOf('#') != -1)
 			getProductAttribute();
 	}
+        
+        
+        var categ = $('#product_cat').val();
+        
+        switch (categ){
+            case 'iseries':               
+                $('.banner-product').html('<img class="img-responsive" src="/img/cms/Serta/Producto/iSeries.jpg" />');
+                break;
+            case 'icomfort':               
+                $('.banner-product').html('<img class="img-responsive" src="/img/cms/Serta/Producto/iComfort.jpg" />');
+                break;
+            case 'perfect-sleeper':               
+                $('.banner-product').html('<img class="img-responsive" src="/img/cms/Serta/Producto/perfect-sleeper.jpg" />');
+                break;
+            case 'sertapedic':
+                $('.banner-product').html('');
+                $('.primary_block').css('margin-top','303px');
+                break;
+            default:
+                $('.banner-product').html('');
+                $('.primary_block').css('margin-top','303px');
+                break;
+        }
+        
+        
 });
 
 //find a specific price rule, based on pre calculated dom display array
