@@ -1,7 +1,6 @@
 /* product desc */
 /* primary_block ***************************************************************************** */
-.primary_block {
-  margin-top:250px;
+.primary_block { 
   margin-bottom: 40px;
   background-image: url('/img/tan.jpg');
   padding:20px;
@@ -1329,7 +1328,7 @@ h3{
 }
 
 h1{
-    font-family: 'Open Sans' !important;
+    font-family: 'Open Sans Condensed' !important;
     font-size:40px;
 }
 
@@ -1347,4 +1346,16 @@ h1{
     font-size: 24px !important;
     font-style: italic !important;
     line-height: 2 !important;
+}
+
+@media (max-width: 991px){
+    .banner-product{
+        margin-top: -20px;
+    }
+}
+
+@media (min-width: 992px){
+    .banner-product{
+        margin-top: -84px;
+    }
 }

@@ -63,6 +63,7 @@
                 $('a[title="Sertapedic"]').first().html('Sertapedic<br><img src="/img/cms/Serta/Sertapedic.jpg" alt="" />');
                 $('a[title="Sertapedic"]').first().after('<p style="font-size:13px; text-transform:capitalize; width: 180px;">La colecci&oacute;n de colchones Sertapedic&reg; est&aacute; dise&ntilde;ada para ofrecer la calidad que se espera de la marca Serta&reg; a un precio excepcional.</p>');
                 $('a[title="Sertapedic"]').first().parent().css({'margin-right':'15px', 'border-right': '1px rgba(0,0,0,0.15) solid', 'border-left':'1px rgba(255,255,255,0.7) solid','width':'200px','padding':'5px 5px 5px 5px'});
+                
             });
             
             $(document).scroll(function(){
